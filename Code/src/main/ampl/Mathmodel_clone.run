@@ -1,0 +1,53 @@
+## Mathmodel_clone.run file
+# Run file for solving problem using bare boned CPLEX (No heuristic)
+# Created by: Claes Arvidson and Akdas Hossain
+
+#-----------------------------------
+# Command file: Mathmodel_clone.run
+#-----------------------------------
+
+reset;                  # Nollställer
+option solver cplexamp;    # Val av lösare.
+#option presolve 0;      
+option omit_zero_cols 1;   # Skriver ej ut nollor i kolumner
+option omit_zero_rows 1;   # Skriver ej ut nollor i rader
+option display_1col 10000; # Skriver ut bara en kolumn (mer lättläst)
+option cplex_options "timing 1 mipdisplay 2"; #Tidtagning och utskrifter
+
+model ***MODFILE***;   # Läser in namnet på modellfilen. 
+data ***DATAFILE***;    # Läser in namnet på datafilen. 
+
+let time_elapsed := _ampl_time + _total_solve_elapsed_time;
+let iteration_time := _ampl_time + _total_solve_elapsed_time - time_elapsed;
+let number_of_iterations := 0;
+
+#Start solution
+for {i in I}
+{
+	fix x_s[i] := (t_e[i] + t_s[i])/2 - l[i]/2;
+	fix x_e[i] := x_s[i] + l[i];
+	#fix x_s[i];
+	
+
+}
+
+#Start solution
+for {i in D}
+{
+	fix x_s[I_df[i]] := t_s[I_df[i]];
+	fix x_e[I_df[i]] := t_s[I_df[i]] + l[I_df[i]];
+
+	fix x_s[I_dt[i]] := t_e[I_dt[i]] - l[I_dt[i]];
+	fix x_e[I_dt[i]] := t_e[I_dt[i]];
+
+
+}
+
+solve;
+
+let number_of_iterations := number_of_iterations + 1;
+let iteration_time := _ampl_time + _total_solve_elapsed_time - time_elapsed;
+let time_elapsed := _ampl_time + _total_solve_elapsed_time;
+display total_cost, number_of_iterations, time_elapsed, iteration_time > ***RESFILE***;
+
+exit;

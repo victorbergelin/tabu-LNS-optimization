@@ -1,0 +1,2659 @@
+minimize total_cost:
+	20*a1[1,1,1] + 20*a1[1,1,2] + 20*a1[1,1,3] + 20*a1[1,1,4] + 
+	20*a1[1,1,5] + 20*a1[1,2,1] + 20*a1[1,2,2] + 20*a1[1,2,3] + 
+	20*a1[1,2,4] + 20*a1[1,2,5] + 20*a1[1,3,1] + 20*a1[1,3,2] + 
+	20*a1[1,3,3] + 20*a1[1,3,4] + 20*a1[1,3,5] + 20*a1[1,4,1] + 
+	20*a1[1,4,2] + 20*a1[1,4,3] + 20*a1[1,4,4] + 20*a1[1,4,5] + 
+	20*a1[1,5,1] + 20*a1[1,5,2] + 20*a1[1,5,3] + 20*a1[1,5,4] + 
+	20*a1[1,5,5] + 20*a1[2,6,6] + 20*a1[2,6,7] + 20*a1[2,6,8] + 
+	20*a1[2,6,9] + 20*a1[2,7,6] + 20*a1[2,7,7] + 20*a1[2,7,8] + 
+	20*a1[2,7,9] + 20*a1[2,8,6] + 20*a1[2,8,7] + 20*a1[2,8,8] + 
+	20*a1[2,8,9] + 20*a1[2,9,6] + 20*a1[2,9,7] + 20*a1[2,9,8] + 
+	20*a1[2,9,9] + 20*a1[3,10,10] + 20*a1[3,10,11] + 20*a1[3,10,12] + 
+	20*a1[3,10,13] + 20*a1[3,10,14] + 20*a1[3,10,15] + 20*a1[3,11,10] + 
+	20*a1[3,11,11] + 20*a1[3,11,12] + 20*a1[3,11,13] + 20*a1[3,11,14] + 
+	20*a1[3,11,15] + 20*a1[3,12,10] + 20*a1[3,12,11] + 20*a1[3,12,12] + 
+	20*a1[3,12,13] + 20*a1[3,12,14] + 20*a1[3,12,15] + 20*a1[3,13,10] + 
+	20*a1[3,13,11] + 20*a1[3,13,12] + 20*a1[3,13,13] + 20*a1[3,13,14] + 
+	20*a1[3,13,15] + 20*a1[3,14,10] + 20*a1[3,14,11] + 20*a1[3,14,12] + 
+	20*a1[3,14,13] + 20*a1[3,14,14] + 20*a1[3,14,15] + 20*a1[3,15,10] + 
+	20*a1[3,15,11] + 20*a1[3,15,12] + 20*a1[3,15,13] + 20*a1[3,15,14] + 
+	20*a1[3,15,15] + 20*a1[4,16,16] + 20*a1[4,16,17] + 20*a1[4,16,18] + 
+	20*a1[4,17,16] + 20*a1[4,17,17] + 20*a1[4,17,18] + 20*a1[4,18,16] + 
+	20*a1[4,18,17] + 20*a1[4,18,18] + 20*a1[5,19,19] + 20*a1[5,19,20] + 
+	20*a1[5,19,21] + 20*a1[5,20,19] + 20*a1[5,20,20] + 20*a1[5,20,21] + 
+	20*a1[5,21,19] + 20*a1[5,21,20] + 20*a1[5,21,21] + 20*a1[6,22,22] + 
+	20*a1[6,22,23] + 20*a1[6,22,24] + 20*a1[6,23,22] + 20*a1[6,23,23] + 
+	20*a1[6,23,24] + 20*a1[6,24,22] + 20*a1[6,24,23] + 20*a1[6,24,24] + 
+	20*a1[7,25,25] + 20*a1[7,25,26] + 20*a1[7,26,25] + 20*a1[7,26,26] + 
+	20*a1[8,27,27] + 20*a1[8,27,28] + 20*a1[8,27,29] + 20*a1[8,27,30] + 
+	20*a1[8,28,27] + 20*a1[8,28,28] + 20*a1[8,28,29] + 20*a1[8,28,30] + 
+	20*a1[8,29,27] + 20*a1[8,29,28] + 20*a1[8,29,29] + 20*a1[8,29,30] + 
+	20*a1[8,30,27] + 20*a1[8,30,28] + 20*a1[8,30,29] + 20*a1[8,30,30] + 
+	20*a1[9,31,31] + 20*a1[9,31,32] + 20*a1[9,31,33] + 20*a1[9,31,34] + 
+	20*a1[9,32,31] + 20*a1[9,32,32] + 20*a1[9,32,33] + 20*a1[9,32,34] + 
+	20*a1[9,33,31] + 20*a1[9,33,32] + 20*a1[9,33,33] + 20*a1[9,33,34] + 
+	20*a1[9,34,31] + 20*a1[9,34,32] + 20*a1[9,34,33] + 20*a1[9,34,34] + 
+	20*a1[10,35,35] + 20*a1[10,35,36] + 20*a1[10,36,35] + 20*a1[10,36,36]
+	 + 20*a2[1] + 20*a2[2] + 20*a2[3] + 20*a2[4] + 20*a2[5] + 20*a2[6] + 
+	20*a2[7] + 20*a2[8] + 20*a2[9] + 20*a2[10] + 20*a2[11] + 20*a2[12] + 
+	20*a2[13] + 20*a2[14] + 20*a2[15] + 20*a2[16] + 20*a2[17] + 20*a2[18]
+	 + 20*a2[19] + 20*a2[20] + 20*a2[21] + 20*a2[22] + 20*a2[23] + 
+	20*a2[24] + 20*a2[25] + 20*a2[26] + 20*a2[27] + 20*a2[28] + 20*a2[29]
+	 + 20*a2[30] + 20*a2[31] + 20*a2[32] + 20*a2[33] + 20*a2[34] + 
+	20*a2[35] + 20*a2[36] + 20*a3[1] + 20*a3[2] + 20*a3[3] + 20*a3[4] + 
+	20*a3[5] + 20*a3[6] + 20*a3[7] + 20*a3[8] + 20*a3[9] + 20*a3[10] + 
+	20*a3[11] + 20*a3[12] + 20*a3[13] + 20*a3[14] + 20*a3[15] + 20*a3[16]
+	 + 20*a3[17] + 20*a3[18] + 20*a3[19] + 20*a3[20] + 20*a3[21] + 
+	20*a3[22] + 20*a3[23] + 20*a3[24] + 20*a3[25] + 20*a3[26] + 20*a3[27]
+	 + 20*a3[28] + 20*a3[29] + 20*a3[30] + 20*a3[31] + 20*a3[32] + 
+	20*a3[33] + 20*a3[34] + 20*a3[35] + 20*a3[36] + 20*a4[1] + 20*a4[2] + 
+	20*a4[3] + 20*a4[4] + 20*a4[5] + 20*a4[6] + 20*a4[7] + 20*a4[8] + 
+	20*a4[9] + 20*a4[10] + 20*a4[11] + 20*a4[12] + 20*a4[13] + 20*a4[14] + 
+	20*a4[15] + 20*a4[16] + 20*a4[17] + 20*a4[18] + 20*a4[19] + 20*a4[20]
+	 + 20*a4[21] + 20*a4[22] + 20*a4[23] + 20*a4[24] + 20*a4[25] + 
+	20*a4[26] + 20*a4[27] + 20*a4[28] + 20*a4[29] + 20*a4[30] + 20*a4[31]
+	 + 20*a4[32] + 20*a4[33] + 20*a4[34] + 20*a4[35] + 20*a4[36] + 
+	20*a4[37] + 20*a4[38] + 20*a4[39] + 20*a4[40] + 20*a5[1] + 20*a5[2] + 
+	20*a5[3] + 20*a5[4] + 20*a5[5] + 20*a5[6] + 20*a5[7] + 20*a5[8] + 
+	20*a5[9] + 20*a5[10] + 20*a5[11] + 20*a5[12] + 20*a5[13] + 20*a5[14] + 
+	20*a5[15] + 20*a5[16] + 20*a5[17] + 20*a5[18] + 20*a5[19] + 20*a5[20]
+	 + 20*a5[21] + 20*a5[22] + 20*a5[23] + 20*a5[24] + 20*a5[25] + 
+	20*a5[26] + 20*a5[27] + 20*a5[28] + 20*a5[29] + 20*a5[30] + 20*a5[31]
+	 + 20*a5[32] + 20*a5[33] + 20*a5[34] + 20*a5[35] + 20*a5[36] + 
+	20*a5[37] + 20*a5[38] + 20*a5[39] + 20*a5[40];
+
+subject to first_task[1]:
+	y_s[1,1] + y_s[1,2] + y_s[1,3] + y_s[1,4] + y_s[1,5] = 1;
+
+subject to first_task[2]:
+	y_s[2,6] + y_s[2,7] + y_s[2,8] + y_s[2,9] = 1;
+
+subject to first_task[3]:
+	y_s[3,10] + y_s[3,11] + y_s[3,12] + y_s[3,13] + y_s[3,14] + y_s[3,15]
+	 = 1;
+
+subject to first_task[4]:
+	y_s[4,16] + y_s[4,17] + y_s[4,18] = 1;
+
+subject to first_task[5]:
+	y_s[5,19] + y_s[5,20] + y_s[5,21] = 1;
+
+subject to first_task[6]:
+	y_s[6,22] + y_s[6,23] + y_s[6,24] = 1;
+
+subject to first_task[7]:
+	y_s[7,25] + y_s[7,26] = 1;
+
+subject to first_task[8]:
+	y_s[8,27] + y_s[8,28] + y_s[8,29] + y_s[8,30] = 1;
+
+subject to first_task[9]:
+	y_s[9,31] + y_s[9,32] + y_s[9,33] + y_s[9,34] = 1;
+
+subject to first_task[10]:
+	y_s[10,35] + y_s[10,36] = 1;
+
+subject to last_task[1]:
+	y_e[1,1] + y_e[1,2] + y_e[1,3] + y_e[1,4] + y_e[1,5] = 1;
+
+subject to last_task[2]:
+	y_e[2,6] + y_e[2,7] + y_e[2,8] + y_e[2,9] = 1;
+
+subject to last_task[3]:
+	y_e[3,10] + y_e[3,11] + y_e[3,12] + y_e[3,13] + y_e[3,14] + y_e[3,15]
+	 = 1;
+
+subject to last_task[4]:
+	y_e[4,16] + y_e[4,17] + y_e[4,18] = 1;
+
+subject to last_task[5]:
+	y_e[5,19] + y_e[5,20] + y_e[5,21] = 1;
+
+subject to last_task[6]:
+	y_e[6,22] + y_e[6,23] + y_e[6,24] = 1;
+
+subject to last_task[7]:
+	y_e[7,25] + y_e[7,26] = 1;
+
+subject to last_task[8]:
+	y_e[8,27] + y_e[8,28] + y_e[8,29] + y_e[8,30] = 1;
+
+subject to last_task[9]:
+	y_e[9,31] + y_e[9,32] + y_e[9,33] + y_e[9,34] = 1;
+
+subject to last_task[10]:
+	y_e[10,35] + y_e[10,36] = 1;
+
+subject to check_if_endtask[1,1]:
+	y[1,1,1] + y[1,1,2] + y[1,1,3] + y[1,1,4] + y[1,1,5] + y_e[1,1] = 1;
+
+subject to check_if_endtask[1,2]:
+	y[1,2,1] + y[1,2,2] + y[1,2,3] + y[1,2,4] + y[1,2,5] + y_e[1,2] = 1;
+
+subject to check_if_endtask[1,3]:
+	y[1,3,1] + y[1,3,2] + y[1,3,3] + y[1,3,4] + y[1,3,5] + y_e[1,3] = 1;
+
+subject to check_if_endtask[1,4]:
+	y[1,4,1] + y[1,4,2] + y[1,4,3] + y[1,4,4] + y[1,4,5] + y_e[1,4] = 1;
+
+subject to check_if_endtask[1,5]:
+	y[1,5,1] + y[1,5,2] + y[1,5,3] + y[1,5,4] + y[1,5,5] + y_e[1,5] = 1;
+
+subject to check_if_endtask[2,6]:
+	y[2,6,6] + y[2,6,7] + y[2,6,8] + y[2,6,9] + y_e[2,6] = 1;
+
+subject to check_if_endtask[2,7]:
+	y[2,7,6] + y[2,7,7] + y[2,7,8] + y[2,7,9] + y_e[2,7] = 1;
+
+subject to check_if_endtask[2,8]:
+	y[2,8,6] + y[2,8,7] + y[2,8,8] + y[2,8,9] + y_e[2,8] = 1;
+
+subject to check_if_endtask[2,9]:
+	y[2,9,6] + y[2,9,7] + y[2,9,8] + y[2,9,9] + y_e[2,9] = 1;
+
+subject to check_if_endtask[3,10]:
+	y[3,10,10] + y[3,10,11] + y[3,10,12] + y[3,10,13] + y[3,10,14] + 
+	y[3,10,15] + y_e[3,10] = 1;
+
+subject to check_if_endtask[3,11]:
+	y[3,11,10] + y[3,11,11] + y[3,11,12] + y[3,11,13] + y[3,11,14] + 
+	y[3,11,15] + y_e[3,11] = 1;
+
+subject to check_if_endtask[3,12]:
+	y[3,12,10] + y[3,12,11] + y[3,12,12] + y[3,12,13] + y[3,12,14] + 
+	y[3,12,15] + y_e[3,12] = 1;
+
+subject to check_if_endtask[3,13]:
+	y[3,13,10] + y[3,13,11] + y[3,13,12] + y[3,13,13] + y[3,13,14] + 
+	y[3,13,15] + y_e[3,13] = 1;
+
+subject to check_if_endtask[3,14]:
+	y[3,14,10] + y[3,14,11] + y[3,14,12] + y[3,14,13] + y[3,14,14] + 
+	y[3,14,15] + y_e[3,14] = 1;
+
+subject to check_if_endtask[3,15]:
+	y[3,15,10] + y[3,15,11] + y[3,15,12] + y[3,15,13] + y[3,15,14] + 
+	y[3,15,15] + y_e[3,15] = 1;
+
+subject to check_if_endtask[4,16]:
+	y[4,16,16] + y[4,16,17] + y[4,16,18] + y_e[4,16] = 1;
+
+subject to check_if_endtask[4,17]:
+	y[4,17,16] + y[4,17,17] + y[4,17,18] + y_e[4,17] = 1;
+
+subject to check_if_endtask[4,18]:
+	y[4,18,16] + y[4,18,17] + y[4,18,18] + y_e[4,18] = 1;
+
+subject to check_if_endtask[5,19]:
+	y[5,19,19] + y[5,19,20] + y[5,19,21] + y_e[5,19] = 1;
+
+subject to check_if_endtask[5,20]:
+	y[5,20,19] + y[5,20,20] + y[5,20,21] + y_e[5,20] = 1;
+
+subject to check_if_endtask[5,21]:
+	y[5,21,19] + y[5,21,20] + y[5,21,21] + y_e[5,21] = 1;
+
+subject to check_if_endtask[6,22]:
+	y[6,22,22] + y[6,22,23] + y[6,22,24] + y_e[6,22] = 1;
+
+subject to check_if_endtask[6,23]:
+	y[6,23,22] + y[6,23,23] + y[6,23,24] + y_e[6,23] = 1;
+
+subject to check_if_endtask[6,24]:
+	y[6,24,22] + y[6,24,23] + y[6,24,24] + y_e[6,24] = 1;
+
+subject to check_if_endtask[7,25]:
+	y[7,25,25] + y[7,25,26] + y_e[7,25] = 1;
+
+subject to check_if_endtask[7,26]:
+	y[7,26,25] + y[7,26,26] + y_e[7,26] = 1;
+
+subject to check_if_endtask[8,27]:
+	y[8,27,27] + y[8,27,28] + y[8,27,29] + y[8,27,30] + y_e[8,27] = 1;
+
+subject to check_if_endtask[8,28]:
+	y[8,28,27] + y[8,28,28] + y[8,28,29] + y[8,28,30] + y_e[8,28] = 1;
+
+subject to check_if_endtask[8,29]:
+	y[8,29,27] + y[8,29,28] + y[8,29,29] + y[8,29,30] + y_e[8,29] = 1;
+
+subject to check_if_endtask[8,30]:
+	y[8,30,27] + y[8,30,28] + y[8,30,29] + y[8,30,30] + y_e[8,30] = 1;
+
+subject to check_if_endtask[9,31]:
+	y[9,31,31] + y[9,31,32] + y[9,31,33] + y[9,31,34] + y_e[9,31] = 1;
+
+subject to check_if_endtask[9,32]:
+	y[9,32,31] + y[9,32,32] + y[9,32,33] + y[9,32,34] + y_e[9,32] = 1;
+
+subject to check_if_endtask[9,33]:
+	y[9,33,31] + y[9,33,32] + y[9,33,33] + y[9,33,34] + y_e[9,33] = 1;
+
+subject to check_if_endtask[9,34]:
+	y[9,34,31] + y[9,34,32] + y[9,34,33] + y[9,34,34] + y_e[9,34] = 1;
+
+subject to check_if_endtask[10,35]:
+	y[10,35,35] + y[10,35,36] + y_e[10,35] = 1;
+
+subject to check_if_endtask[10,36]:
+	y[10,36,35] + y[10,36,36] + y_e[10,36] = 1;
+
+subject to check_if_starttask[1,1]:
+	y[1,1,1] + y[1,2,1] + y[1,3,1] + y[1,4,1] + y[1,5,1] + y_s[1,1] = 1;
+
+subject to check_if_starttask[1,2]:
+	y[1,1,2] + y[1,2,2] + y[1,3,2] + y[1,4,2] + y[1,5,2] + y_s[1,2] = 1;
+
+subject to check_if_starttask[1,3]:
+	y[1,1,3] + y[1,2,3] + y[1,3,3] + y[1,4,3] + y[1,5,3] + y_s[1,3] = 1;
+
+subject to check_if_starttask[1,4]:
+	y[1,1,4] + y[1,2,4] + y[1,3,4] + y[1,4,4] + y[1,5,4] + y_s[1,4] = 1;
+
+subject to check_if_starttask[1,5]:
+	y[1,1,5] + y[1,2,5] + y[1,3,5] + y[1,4,5] + y[1,5,5] + y_s[1,5] = 1;
+
+subject to check_if_starttask[2,6]:
+	y[2,6,6] + y[2,7,6] + y[2,8,6] + y[2,9,6] + y_s[2,6] = 1;
+
+subject to check_if_starttask[2,7]:
+	y[2,6,7] + y[2,7,7] + y[2,8,7] + y[2,9,7] + y_s[2,7] = 1;
+
+subject to check_if_starttask[2,8]:
+	y[2,6,8] + y[2,7,8] + y[2,8,8] + y[2,9,8] + y_s[2,8] = 1;
+
+subject to check_if_starttask[2,9]:
+	y[2,6,9] + y[2,7,9] + y[2,8,9] + y[2,9,9] + y_s[2,9] = 1;
+
+subject to check_if_starttask[3,10]:
+	y[3,10,10] + y[3,11,10] + y[3,12,10] + y[3,13,10] + y[3,14,10] + 
+	y[3,15,10] + y_s[3,10] = 1;
+
+subject to check_if_starttask[3,11]:
+	y[3,10,11] + y[3,11,11] + y[3,12,11] + y[3,13,11] + y[3,14,11] + 
+	y[3,15,11] + y_s[3,11] = 1;
+
+subject to check_if_starttask[3,12]:
+	y[3,10,12] + y[3,11,12] + y[3,12,12] + y[3,13,12] + y[3,14,12] + 
+	y[3,15,12] + y_s[3,12] = 1;
+
+subject to check_if_starttask[3,13]:
+	y[3,10,13] + y[3,11,13] + y[3,12,13] + y[3,13,13] + y[3,14,13] + 
+	y[3,15,13] + y_s[3,13] = 1;
+
+subject to check_if_starttask[3,14]:
+	y[3,10,14] + y[3,11,14] + y[3,12,14] + y[3,13,14] + y[3,14,14] + 
+	y[3,15,14] + y_s[3,14] = 1;
+
+subject to check_if_starttask[3,15]:
+	y[3,10,15] + y[3,11,15] + y[3,12,15] + y[3,13,15] + y[3,14,15] + 
+	y[3,15,15] + y_s[3,15] = 1;
+
+subject to check_if_starttask[4,16]:
+	y[4,16,16] + y[4,17,16] + y[4,18,16] + y_s[4,16] = 1;
+
+subject to check_if_starttask[4,17]:
+	y[4,16,17] + y[4,17,17] + y[4,18,17] + y_s[4,17] = 1;
+
+subject to check_if_starttask[4,18]:
+	y[4,16,18] + y[4,17,18] + y[4,18,18] + y_s[4,18] = 1;
+
+subject to check_if_starttask[5,19]:
+	y[5,19,19] + y[5,20,19] + y[5,21,19] + y_s[5,19] = 1;
+
+subject to check_if_starttask[5,20]:
+	y[5,19,20] + y[5,20,20] + y[5,21,20] + y_s[5,20] = 1;
+
+subject to check_if_starttask[5,21]:
+	y[5,19,21] + y[5,20,21] + y[5,21,21] + y_s[5,21] = 1;
+
+subject to check_if_starttask[6,22]:
+	y[6,22,22] + y[6,23,22] + y[6,24,22] + y_s[6,22] = 1;
+
+subject to check_if_starttask[6,23]:
+	y[6,22,23] + y[6,23,23] + y[6,24,23] + y_s[6,23] = 1;
+
+subject to check_if_starttask[6,24]:
+	y[6,22,24] + y[6,23,24] + y[6,24,24] + y_s[6,24] = 1;
+
+subject to check_if_starttask[7,25]:
+	y[7,25,25] + y[7,26,25] + y_s[7,25] = 1;
+
+subject to check_if_starttask[7,26]:
+	y[7,25,26] + y[7,26,26] + y_s[7,26] = 1;
+
+subject to check_if_starttask[8,27]:
+	y[8,27,27] + y[8,28,27] + y[8,29,27] + y[8,30,27] + y_s[8,27] = 1;
+
+subject to check_if_starttask[8,28]:
+	y[8,27,28] + y[8,28,28] + y[8,29,28] + y[8,30,28] + y_s[8,28] = 1;
+
+subject to check_if_starttask[8,29]:
+	y[8,27,29] + y[8,28,29] + y[8,29,29] + y[8,30,29] + y_s[8,29] = 1;
+
+subject to check_if_starttask[8,30]:
+	y[8,27,30] + y[8,28,30] + y[8,29,30] + y[8,30,30] + y_s[8,30] = 1;
+
+subject to check_if_starttask[9,31]:
+	y[9,31,31] + y[9,32,31] + y[9,33,31] + y[9,34,31] + y_s[9,31] = 1;
+
+subject to check_if_starttask[9,32]:
+	y[9,31,32] + y[9,32,32] + y[9,33,32] + y[9,34,32] + y_s[9,32] = 1;
+
+subject to check_if_starttask[9,33]:
+	y[9,31,33] + y[9,32,33] + y[9,33,33] + y[9,34,33] + y_s[9,33] = 1;
+
+subject to check_if_starttask[9,34]:
+	y[9,31,34] + y[9,32,34] + y[9,33,34] + y[9,34,34] + y_s[9,34] = 1;
+
+subject to check_if_starttask[10,35]:
+	y[10,35,35] + y[10,36,35] + y_s[10,35] = 1;
+
+subject to check_if_starttask[10,36]:
+	y[10,35,36] + y[10,36,36] + y_s[10,36] = 1;
+
+subject to start_constraint[1,1,1]:
+	x_s[1] - x_e[1] - 107850000*y[1,1,1] + a1[1,1,1] >= -107850000;
+
+subject to start_constraint[1,1,2]:
+	x_s[2] - x_e[1] - 107850000*y[1,1,2] + a1[1,1,2] >= -107850000;
+
+subject to start_constraint[1,1,3]:
+	x_s[3] - x_e[1] + 166078000*y[1,1,3] + a1[1,1,3] >= 166078000;
+
+subject to start_constraint[1,1,4]:
+	x_s[4] - x_e[1] + 373080000*y[1,1,4] + a1[1,1,4] >= 373080000;
+
+subject to start_constraint[1,1,5]:
+	x_s[5] - x_e[1] + 748315000*y[1,1,5] + a1[1,1,5] >= 748315000;
+
+subject to start_constraint[1,2,1]:
+	x_s[1] - x_e[2] - 427815000*y[1,2,1] + a1[1,2,1] >= -427815000;
+
+subject to start_constraint[1,2,2]:
+	x_s[2] - x_e[2] - 427815000*y[1,2,2] + a1[1,2,2] >= -427815000;
+
+subject to start_constraint[1,2,3]:
+	x_s[3] - x_e[2] - 153887000*y[1,2,3] + a1[1,2,3] >= -153887000;
+
+subject to start_constraint[1,2,4]:
+	x_s[4] - x_e[2] + 53115200*y[1,2,4] + a1[1,2,4] >= 53115200;
+
+subject to start_constraint[1,2,5]:
+	x_s[5] - x_e[2] + 428350000*y[1,2,5] + a1[1,2,5] >= 428350000;
+
+subject to start_constraint[1,3,1]:
+	x_s[1] - x_e[3] - 542285000*y[1,3,1] + a1[1,3,1] >= -542285000;
+
+subject to start_constraint[1,3,2]:
+	x_s[2] - x_e[3] - 542285000*y[1,3,2] + a1[1,3,2] >= -542285000;
+
+subject to start_constraint[1,3,3]:
+	x_s[3] - x_e[3] - 268357000*y[1,3,3] + a1[1,3,3] >= -268357000;
+
+subject to start_constraint[1,3,4]:
+	x_s[4] - x_e[3] - 61355200*y[1,3,4] + a1[1,3,4] >= -61355200;
+
+subject to start_constraint[1,3,5]:
+	x_s[5] - x_e[3] + 313880000*y[1,3,5] + a1[1,3,5] >= 313880000;
+
+subject to start_constraint[1,4,1]:
+	x_s[1] - x_e[4] - 846048000*y[1,4,1] + a1[1,4,1] >= -846048000;
+
+subject to start_constraint[1,4,2]:
+	x_s[2] - x_e[4] - 846048000*y[1,4,2] + a1[1,4,2] >= -846048000;
+
+subject to start_constraint[1,4,3]:
+	x_s[3] - x_e[4] - 572120000*y[1,4,3] + a1[1,4,3] >= -572120000;
+
+subject to start_constraint[1,4,4]:
+	x_s[4] - x_e[4] - 365118000*y[1,4,4] + a1[1,4,4] >= -365118000;
+
+subject to start_constraint[1,4,5]:
+	x_s[5] - x_e[4] + 10117000*y[1,4,5] + a1[1,4,5] >= 10117000;
+
+subject to start_constraint[1,5,1]:
+	x_s[1] - x_e[5] - 1e+09*y[1,5,1] + a1[1,5,1] >= -1e+09;
+
+subject to start_constraint[1,5,2]:
+	x_s[2] - x_e[5] - 1e+09*y[1,5,2] + a1[1,5,2] >= -1e+09;
+
+subject to start_constraint[1,5,3]:
+	x_s[3] - x_e[5] - 726072000*y[1,5,3] + a1[1,5,3] >= -726072000;
+
+subject to start_constraint[1,5,4]:
+	x_s[4] - x_e[5] - 519070000*y[1,5,4] + a1[1,5,4] >= -519070000;
+
+subject to start_constraint[1,5,5]:
+	x_s[5] - x_e[5] - 143835000*y[1,5,5] + a1[1,5,5] >= -143835000;
+
+subject to start_constraint[2,6,6]:
+	x_s[6] - x_e[6] - 447863000*y[2,6,6] + a1[2,6,6] >= -447863000;
+
+subject to start_constraint[2,6,7]:
+	x_s[7] - x_e[6] - 181175000*y[2,6,7] + a1[2,6,7] >= -181175000;
+
+subject to start_constraint[2,6,8]:
+	x_s[8] - x_e[6] + 63250400*y[2,6,8] + a1[2,6,8] >= 63250400;
+
+subject to start_constraint[2,6,9]:
+	x_s[9] - x_e[6] + 213659000*y[2,6,9] + a1[2,6,9] >= 213659000;
+
+subject to start_constraint[2,7,6]:
+	x_s[6] - x_e[7] - 641300000*y[2,7,6] + a1[2,7,6] >= -641300000;
+
+subject to start_constraint[2,7,7]:
+	x_s[7] - x_e[7] - 374613000*y[2,7,7] + a1[2,7,7] >= -374613000;
+
+subject to start_constraint[2,7,8]:
+	x_s[8] - x_e[7] - 130187000*y[2,7,8] + a1[2,7,8] >= -130187000;
+
+subject to start_constraint[2,7,9]:
+	x_s[9] - x_e[7] + 20222200*y[2,7,9] + a1[2,7,9] >= 20222200;
+
+subject to start_constraint[2,8,6]:
+	x_s[6] - x_e[8] - 844420000*y[2,8,6] + a1[2,8,6] >= -844420000;
+
+subject to start_constraint[2,8,7]:
+	x_s[7] - x_e[8] - 577732000*y[2,8,7] + a1[2,8,7] >= -577732000;
+
+subject to start_constraint[2,8,8]:
+	x_s[8] - x_e[8] - 333307000*y[2,8,8] + a1[2,8,8] >= -333307000;
+
+subject to start_constraint[2,8,9]:
+	x_s[9] - x_e[8] - 182898000*y[2,8,9] + a1[2,8,9] >= -182898000;
+
+subject to start_constraint[2,9,6]:
+	x_s[6] - x_e[9] - 961788000*y[2,9,6] + a1[2,9,6] >= -961788000;
+
+subject to start_constraint[2,9,7]:
+	x_s[7] - x_e[9] - 695100000*y[2,9,7] + a1[2,9,7] >= -695100000;
+
+subject to start_constraint[2,9,8]:
+	x_s[8] - x_e[9] - 450675000*y[2,9,8] + a1[2,9,8] >= -450675000;
+
+subject to start_constraint[2,9,9]:
+	x_s[9] - x_e[9] - 300266000*y[2,9,9] + a1[2,9,9] >= -300266000;
+
+subject to start_constraint[3,10,10]:
+	x_s[10] - x_e[10] - 442338000*y[3,10,10] + a1[3,10,10] >= -442338000;
+
+subject to start_constraint[3,10,11]:
+	x_s[11] - x_e[10] - 442338000*y[3,10,11] + a1[3,10,11] >= -442338000;
+
+subject to start_constraint[3,10,12]:
+	x_s[12] - x_e[10] - 279869000*y[3,10,12] + a1[3,10,12] >= -279869000;
+
+subject to start_constraint[3,10,13]:
+	x_s[13] - x_e[10] - 234734000*y[3,10,13] + a1[3,10,13] >= -234734000;
+
+subject to start_constraint[3,10,14]:
+	x_s[14] - x_e[10] + 302028000*y[3,10,14] + a1[3,10,14] >= 302028000;
+
+subject to start_constraint[3,10,15]:
+	x_s[15] - x_e[10] + 497618000*y[3,10,15] + a1[3,10,15] >= 497618000;
+
+subject to start_constraint[3,11,10]:
+	x_s[10] - x_e[11] - 649617000*y[3,11,10] + a1[3,11,10] >= -649617000;
+
+subject to start_constraint[3,11,11]:
+	x_s[11] - x_e[11] - 649617000*y[3,11,11] + a1[3,11,11] >= -649617000;
+
+subject to start_constraint[3,11,12]:
+	x_s[12] - x_e[11] - 487147000*y[3,11,12] + a1[3,11,12] >= -487147000;
+
+subject to start_constraint[3,11,13]:
+	x_s[13] - x_e[11] - 442012000*y[3,11,13] + a1[3,11,13] >= -442012000;
+
+subject to start_constraint[3,11,14]:
+	x_s[14] - x_e[11] + 94750000*y[3,11,14] + a1[3,11,14] >= 94750000;
+
+subject to start_constraint[3,11,15]:
+	x_s[15] - x_e[11] + 290340000*y[3,11,15] + a1[3,11,15] >= 290340000;
+
+subject to start_constraint[3,12,10]:
+	x_s[10] - x_e[12] - 735716000*y[3,12,10] + a1[3,12,10] >= -735716000;
+
+subject to start_constraint[3,12,11]:
+	x_s[11] - x_e[12] - 735716000*y[3,12,11] + a1[3,12,11] >= -735716000;
+
+subject to start_constraint[3,12,12]:
+	x_s[12] - x_e[12] - 573247000*y[3,12,12] + a1[3,12,12] >= -573247000;
+
+subject to start_constraint[3,12,13]:
+	x_s[13] - x_e[12] - 528112000*y[3,12,13] + a1[3,12,13] >= -528112000;
+
+subject to start_constraint[3,12,14]:
+	x_s[14] - x_e[12] + 8650480*y[3,12,14] + a1[3,12,14] >= 8650480;
+
+subject to start_constraint[3,12,15]:
+	x_s[15] - x_e[12] + 204240000*y[3,12,15] + a1[3,12,15] >= 204240000;
+
+subject to start_constraint[3,13,10]:
+	x_s[10] - x_e[13] - 800105000*y[3,13,10] + a1[3,13,10] >= -800105000;
+
+subject to start_constraint[3,13,11]:
+	x_s[11] - x_e[13] - 800105000*y[3,13,11] + a1[3,13,11] >= -800105000;
+
+subject to start_constraint[3,13,12]:
+	x_s[12] - x_e[13] - 637636000*y[3,13,12] + a1[3,13,12] >= -637636000;
+
+subject to start_constraint[3,13,13]:
+	x_s[13] - x_e[13] - 592500000*y[3,13,13] + a1[3,13,13] >= -592500000;
+
+subject to start_constraint[3,13,14]:
+	x_s[14] - x_e[13] - 55738100*y[3,13,14] + a1[3,13,14] >= -55738100;
+
+subject to start_constraint[3,13,15]:
+	x_s[15] - x_e[13] + 139851000*y[3,13,15] + a1[3,13,15] >= 139851000;
+
+subject to start_constraint[3,14,10]:
+	x_s[10] - x_e[14] - 1e+09*y[3,14,10] + a1[3,14,10] >= -1e+09;
+
+subject to start_constraint[3,14,11]:
+	x_s[11] - x_e[14] - 1e+09*y[3,14,11] + a1[3,14,11] >= -1e+09;
+
+subject to start_constraint[3,14,12]:
+	x_s[12] - x_e[14] - 837531000*y[3,14,12] + a1[3,14,12] >= -837531000;
+
+subject to start_constraint[3,14,13]:
+	x_s[13] - x_e[14] - 792395000*y[3,14,13] + a1[3,14,13] >= -792395000;
+
+subject to start_constraint[3,14,14]:
+	x_s[14] - x_e[14] - 255633000*y[3,14,14] + a1[3,14,14] >= -255633000;
+
+subject to start_constraint[3,14,15]:
+	x_s[15] - x_e[14] - 60043600*y[3,14,15] + a1[3,14,15] >= -60043600;
+
+subject to start_constraint[3,15,10]:
+	x_s[10] - x_e[15] - 1e+09*y[3,15,10] + a1[3,15,10] >= -1e+09;
+
+subject to start_constraint[3,15,11]:
+	x_s[11] - x_e[15] - 1e+09*y[3,15,11] + a1[3,15,11] >= -1e+09;
+
+subject to start_constraint[3,15,12]:
+	x_s[12] - x_e[15] - 837531000*y[3,15,12] + a1[3,15,12] >= -837531000;
+
+subject to start_constraint[3,15,13]:
+	x_s[13] - x_e[15] - 792395000*y[3,15,13] + a1[3,15,13] >= -792395000;
+
+subject to start_constraint[3,15,14]:
+	x_s[14] - x_e[15] - 255633000*y[3,15,14] + a1[3,15,14] >= -255633000;
+
+subject to start_constraint[3,15,15]:
+	x_s[15] - x_e[15] - 60043600*y[3,15,15] + a1[3,15,15] >= -60043600;
+
+subject to start_constraint[4,16,16]:
+	x_s[16] - x_e[16] - 20113300*y[4,16,16] + a1[4,16,16] >= -20113300;
+
+subject to start_constraint[4,16,17]:
+	x_s[17] - x_e[16] + 19107500*y[4,16,17] + a1[4,16,17] >= 19107500;
+
+subject to start_constraint[4,16,18]:
+	x_s[18] - x_e[16] + 517791000*y[4,16,18] + a1[4,16,18] >= 517791000;
+
+subject to start_constraint[4,17,16]:
+	x_s[16] - x_e[17] - 507251000*y[4,17,16] + a1[4,17,16] >= -507251000;
+
+subject to start_constraint[4,17,17]:
+	x_s[17] - x_e[17] - 468031000*y[4,17,17] + a1[4,17,17] >= -468031000;
+
+subject to start_constraint[4,17,18]:
+	x_s[18] - x_e[17] + 30652700*y[4,17,18] + a1[4,17,18] >= 30652700;
+
+subject to start_constraint[4,18,16]:
+	x_s[16] - x_e[18] - 828734000*y[4,18,16] + a1[4,18,16] >= -828734000;
+
+subject to start_constraint[4,18,17]:
+	x_s[17] - x_e[18] - 789513000*y[4,18,17] + a1[4,18,17] >= -789513000;
+
+subject to start_constraint[4,18,18]:
+	x_s[18] - x_e[18] - 290830000*y[4,18,18] + a1[4,18,18] >= -290830000;
+
+subject to start_constraint[5,19,19]:
+	x_s[19] - x_e[19] - 207882000*y[5,19,19] + a1[5,19,19] >= -207882000;
+
+subject to start_constraint[5,19,20]:
+	x_s[20] - x_e[19] - 92514900*y[5,19,20] + a1[5,19,20] >= -92514900;
+
+subject to start_constraint[5,19,21]:
+	x_s[21] - x_e[19] + 530983000*y[5,19,21] + a1[5,19,21] >= 530983000;
+
+subject to start_constraint[5,20,19]:
+	x_s[19] - x_e[20] - 813969000*y[5,20,19] + a1[5,20,19] >= -813969000;
+
+subject to start_constraint[5,20,20]:
+	x_s[20] - x_e[20] - 698602000*y[5,20,20] + a1[5,20,20] >= -698602000;
+
+subject to start_constraint[5,20,21]:
+	x_s[21] - x_e[20] - 75103900*y[5,20,21] + a1[5,20,21] >= -75103900;
+
+subject to start_constraint[5,21,19]:
+	x_s[19] - x_e[21] - 778858000*y[5,21,19] + a1[5,21,19] >= -778858000;
+
+subject to start_constraint[5,21,20]:
+	x_s[20] - x_e[21] - 663491000*y[5,21,20] + a1[5,21,20] >= -663491000;
+
+subject to start_constraint[5,21,21]:
+	x_s[21] - x_e[21] - 39993400*y[5,21,21] + a1[5,21,21] >= -39993400;
+
+subject to start_constraint[6,22,22]:
+	x_s[22] - x_e[22] - 365970000*y[6,22,22] + a1[6,22,22] >= -365970000;
+
+subject to start_constraint[6,22,23]:
+	x_s[23] - x_e[22] - 148243000*y[6,22,23] + a1[6,22,23] >= -148243000;
+
+subject to start_constraint[6,22,24]:
+	x_s[24] - x_e[22] - 86421100*y[6,22,24] + a1[6,22,24] >= -86421100;
+
+subject to start_constraint[6,23,22]:
+	x_s[22] - x_e[23] - 370009000*y[6,23,22] + a1[6,23,22] >= -370009000;
+
+subject to start_constraint[6,23,23]:
+	x_s[23] - x_e[23] - 152281000*y[6,23,23] + a1[6,23,23] >= -152281000;
+
+subject to start_constraint[6,23,24]:
+	x_s[24] - x_e[23] - 90459500*y[6,23,24] + a1[6,23,24] >= -90459500;
+
+subject to start_constraint[6,24,22]:
+	x_s[22] - x_e[24] - 834302000*y[6,24,22] + a1[6,24,22] >= -834302000;
+
+subject to start_constraint[6,24,23]:
+	x_s[23] - x_e[24] - 616575000*y[6,24,23] + a1[6,24,23] >= -616575000;
+
+subject to start_constraint[6,24,24]:
+	x_s[24] - x_e[24] - 554753000*y[6,24,24] + a1[6,24,24] >= -554753000;
+
+subject to start_constraint[7,25,25]:
+	x_s[25] - x_e[25] - 685101000*y[7,25,25] + a1[7,25,25] >= -685101000;
+
+subject to start_constraint[7,25,26]:
+	x_s[26] - x_e[25] - 524082000*y[7,25,26] + a1[7,25,26] >= -524082000;
+
+subject to start_constraint[7,26,25]:
+	x_s[25] - x_e[26] - 1e+09*y[7,26,25] + a1[7,26,25] >= -1e+09;
+
+subject to start_constraint[7,26,26]:
+	x_s[26] - x_e[26] - 838981000*y[7,26,26] + a1[7,26,26] >= -838981000;
+
+subject to start_constraint[8,27,27]:
+	x_s[27] - x_e[27] - 253084000*y[8,27,27] + a1[8,27,27] >= -253084000;
+
+subject to start_constraint[8,27,28]:
+	x_s[28] - x_e[27] - 80433700*y[8,27,28] + a1[8,27,28] >= -80433700;
+
+subject to start_constraint[8,27,29]:
+	x_s[29] - x_e[27] + 165864000*y[8,27,29] + a1[8,27,29] >= 165864000;
+
+subject to start_constraint[8,27,30]:
+	x_s[30] - x_e[27] + 655632000*y[8,27,30] + a1[8,27,30] >= 655632000;
+
+subject to start_constraint[8,28,27]:
+	x_s[27] - x_e[28] - 601145000*y[8,28,27] + a1[8,28,27] >= -601145000;
+
+subject to start_constraint[8,28,28]:
+	x_s[28] - x_e[28] - 428494000*y[8,28,28] + a1[8,28,28] >= -428494000;
+
+subject to start_constraint[8,28,29]:
+	x_s[29] - x_e[28] - 182197000*y[8,28,29] + a1[8,28,29] >= -182197000;
+
+subject to start_constraint[8,28,30]:
+	x_s[30] - x_e[28] + 307572000*y[8,28,30] + a1[8,28,30] >= 307572000;
+
+subject to start_constraint[8,29,27]:
+	x_s[27] - x_e[29] - 956374000*y[8,29,27] + a1[8,29,27] >= -956374000;
+
+subject to start_constraint[8,29,28]:
+	x_s[28] - x_e[29] - 783723000*y[8,29,28] + a1[8,29,28] >= -783723000;
+
+subject to start_constraint[8,29,29]:
+	x_s[29] - x_e[29] - 537426000*y[8,29,29] + a1[8,29,29] >= -537426000;
+
+subject to start_constraint[8,29,30]:
+	x_s[30] - x_e[29] - 47656800*y[8,29,30] + a1[8,29,30] >= -47656800;
+
+subject to start_constraint[8,30,27]:
+	x_s[27] - x_e[30] - 956374000*y[8,30,27] + a1[8,30,27] >= -956374000;
+
+subject to start_constraint[8,30,28]:
+	x_s[28] - x_e[30] - 783723000*y[8,30,28] + a1[8,30,28] >= -783723000;
+
+subject to start_constraint[8,30,29]:
+	x_s[29] - x_e[30] - 537426000*y[8,30,29] + a1[8,30,29] >= -537426000;
+
+subject to start_constraint[8,30,30]:
+	x_s[30] - x_e[30] - 47656800*y[8,30,30] + a1[8,30,30] >= -47656800;
+
+subject to start_constraint[9,31,31]:
+	x_s[31] - x_e[31] - 122512000*y[9,31,31] + a1[9,31,31] >= -122512000;
+
+subject to start_constraint[9,31,32]:
+	x_s[32] - x_e[31] - 110619000*y[9,31,32] + a1[9,31,32] >= -110619000;
+
+subject to start_constraint[9,31,33]:
+	x_s[33] - x_e[31] + 23180300*y[9,31,33] + a1[9,31,33] >= 23180300;
+
+subject to start_constraint[9,31,34]:
+	x_s[34] - x_e[31] + 664882000*y[9,31,34] + a1[9,31,34] >= 664882000;
+
+subject to start_constraint[9,32,31]:
+	x_s[31] - x_e[32] - 695543000*y[9,32,31] + a1[9,32,31] >= -695543000;
+
+subject to start_constraint[9,32,32]:
+	x_s[32] - x_e[32] - 683650000*y[9,32,32] + a1[9,32,32] >= -683650000;
+
+subject to start_constraint[9,32,33]:
+	x_s[33] - x_e[32] - 549851000*y[9,32,33] + a1[9,32,33] >= -549851000;
+
+subject to start_constraint[9,32,34]:
+	x_s[34] - x_e[32] + 91851300*y[9,32,34] + a1[9,32,34] >= 91851300;
+
+subject to start_constraint[9,33,31]:
+	x_s[31] - x_e[33] - 708767000*y[9,33,31] + a1[9,33,31] >= -708767000;
+
+subject to start_constraint[9,33,32]:
+	x_s[32] - x_e[33] - 696873000*y[9,33,32] + a1[9,33,32] >= -696873000;
+
+subject to start_constraint[9,33,33]:
+	x_s[33] - x_e[33] - 563074000*y[9,33,33] + a1[9,33,33] >= -563074000;
+
+subject to start_constraint[9,33,34]:
+	x_s[34] - x_e[33] + 78628100*y[9,33,34] + a1[9,33,34] >= 78628100;
+
+subject to start_constraint[9,34,31]:
+	x_s[31] - x_e[34] - 943701000*y[9,34,31] + a1[9,34,31] >= -943701000;
+
+subject to start_constraint[9,34,32]:
+	x_s[32] - x_e[34] - 931807000*y[9,34,32] + a1[9,34,32] >= -931807000;
+
+subject to start_constraint[9,34,33]:
+	x_s[33] - x_e[34] - 798008000*y[9,34,33] + a1[9,34,33] >= -798008000;
+
+subject to start_constraint[9,34,34]:
+	x_s[34] - x_e[34] - 156306000*y[9,34,34] + a1[9,34,34] >= -156306000;
+
+subject to start_constraint[10,35,35]:
+	x_s[35] - x_e[35] - 1e+09*y[10,35,35] + a1[10,35,35] >= -1e+09;
+
+subject to start_constraint[10,35,36]:
+	x_s[36] - x_e[35] - 540224000*y[10,35,36] + a1[10,35,36] >= -540224000;
+
+subject to start_constraint[10,36,35]:
+	x_s[35] - x_e[36] - 1e+09*y[10,36,35] + a1[10,36,35] >= -1e+09;
+
+subject to start_constraint[10,36,36]:
+	x_s[36] - x_e[36] - 540224000*y[10,36,36] + a1[10,36,36] >= -540224000;
+
+subject to task_length[1]:
+	-x_s[1] + x_e[1] = 69306300;
+
+subject to task_length[2]:
+	-x_s[2] + x_e[2] = 140453000;
+
+subject to task_length[3]:
+	-x_s[3] + x_e[3] = 157517000;
+
+subject to task_length[4]:
+	-x_s[4] + x_e[4] = 177697000;
+
+subject to task_length[5]:
+	-x_s[5] + x_e[5] = 97272000;
+
+subject to task_length[6]:
+	-x_s[6] + x_e[6] = 131028000;
+
+subject to task_length[7]:
+	-x_s[7] + x_e[7] = 144025000;
+
+subject to task_length[8]:
+	-x_s[8] + x_e[8] = 55590200;
+
+subject to task_length[9]:
+	-x_s[9] + x_e[9] = 57891400;
+
+subject to task_length[10]:
+	-x_s[10] + x_e[10] = 96861500;
+
+subject to task_length[11]:
+	-x_s[11] + x_e[11] = 223905000;
+
+subject to task_length[12]:
+	-x_s[12] + x_e[12] = 33561500;
+
+subject to task_length[13]:
+	-x_s[13] + x_e[13] = 129921000;
+
+subject to task_length[14]:
+	-x_s[14] + x_e[14] = 98574800;
+
+subject to task_length[15]:
+	-x_s[15] + x_e[15] = 47576400;
+
+subject to task_length[16]:
+	-x_s[16] + x_e[16] = 225851;
+
+subject to task_length[17]:
+	-x_s[17] + x_e[17] = 101613000;
+
+subject to task_length[18]:
+	-x_s[18] + x_e[18] = 111972000;
+
+subject to task_length[19]:
+	-x_s[19] + x_e[19] = 115933000;
+
+subject to task_length[20]:
+	-x_s[20] + x_e[20] = 218519000;
+
+subject to task_length[21]:
+	-x_s[21] + x_e[21] = 19538200;
+
+subject to task_length[22]:
+	-x_s[22] + x_e[22] = 130762000;
+
+subject to task_length[23]:
+	-x_s[23] + x_e[23] = 61719100;
+
+subject to task_length[24]:
+	-x_s[24] + x_e[24] = 214207000;
+
+subject to task_length[25]:
+	-x_s[25] + x_e[25] = 290308000;
+
+subject to task_length[26]:
+	-x_s[26] + x_e[26] = 7358150;
+
+subject to task_length[27]:
+	-x_s[27] + x_e[27] = 90778500;
+
+subject to task_length[28]:
+	-x_s[28] + x_e[28] = 92514600;
+
+subject to task_length[29]:
+	-x_s[29] + x_e[29] = 189778000;
+
+subject to task_length[30]:
+	-x_s[30] + x_e[30] = 6093630;
+
+subject to task_length[31]:
+	-x_s[31] + x_e[31] = 55779900;
+
+subject to task_length[32]:
+	-x_s[32] + x_e[32] = 287174000;
+
+subject to task_length[33]:
+	-x_s[33] + x_e[33] = 181449000;
+
+subject to task_length[34]:
+	-x_s[34] + x_e[34] = 85372500;
+
+subject to task_length[35]:
+	-x_s[35] + x_e[35] = 301740000;
+
+subject to task_length[36]:
+	-x_s[36] + x_e[36] = 110496000;
+
+subject to task_distance[1]:
+	-u[1] + x_s[27] - x_e[1] = 0;
+
+subject to task_distance[2]:
+	-u[2] + x_s[34] - x_e[2] = 0;
+
+subject to task_distance[3]:
+	-u[3] + x_s[3] - x_e[27] = 0;
+
+subject to task_distance[4]:
+	-u[4] + x_s[4] - x_e[32] = 0;
+
+subject to task_distance[5]:
+	-u[5] + x_s[5] - x_e[7] = 0;
+
+subject to task_distance[6]:
+	-u[6] + x_s[5] - x_e[6] = 0;
+
+subject to task_distance[7]:
+	-u[7] + x_s[29] - x_e[7] = 0;
+
+subject to task_distance[8]:
+	-u[8] + x_s[8] - x_e[27] = 0;
+
+subject to task_distance[9]:
+	-u[9] + x_s[9] - x_e[1] = 0;
+
+subject to task_distance[10]:
+	-u[10] + x_s[35] - x_e[10] = 0;
+
+subject to task_distance[11]:
+	-u[11] + x_s[33] - x_e[11] = 0;
+
+subject to task_distance[12]:
+	-u[12] + x_s[30] - x_e[12] = 0;
+
+subject to task_distance[13]:
+	-u[13] + x_s[13] - x_e[32] = 0;
+
+subject to task_distance[14]:
+	-u[14] + x_s[14] - x_e[25] = 0;
+
+subject to task_distance[15]:
+	-u[15] + x_s[15] - x_e[2] = 0;
+
+subject to task_distance[16]:
+	-u[16] + x_s[29] - x_e[16] = 0;
+
+subject to task_distance[17]:
+	-u[17] + x_s[24] - x_e[17] = 0;
+
+subject to task_distance[18]:
+	-u[18] + x_s[18] - x_e[25] = 0;
+
+subject to task_distance[19]:
+	-u[19] + x_s[13] - x_e[19] = 0;
+
+subject to task_distance[20]:
+	-u[20] + x_s[20] - x_e[22] = 0;
+
+subject to task_distance[21]:
+	-u[21] + x_s[21] - x_e[22] = 0;
+
+subject to task_distance[22]:
+	-u[22] + x_s[15] - x_e[22] = 0;
+
+subject to task_distance[23]:
+	-u[23] + x_s[23] - x_e[10] = 0;
+
+subject to task_distance[24]:
+	-u[24] + x_s[24] - x_e[27] = 0;
+
+subject to task_distance[25]:
+	-u[25] + x_s[21] - x_e[25] = 0;
+
+subject to task_distance[26]:
+	-u[26] + x_s[26] - x_e[33] = 0;
+
+subject to task_distance[27]:
+	-u[27] + x_s[14] - x_e[27] = 0;
+
+subject to task_distance[28]:
+	-u[28] + x_s[21] - x_e[28] = 0;
+
+subject to task_distance[29]:
+	-u[29] + x_s[29] - x_e[11] = 0;
+
+subject to task_distance[30]:
+	-u[30] + x_s[30] - x_e[11] = 0;
+
+subject to task_distance[31]:
+	-u[31] + x_s[11] - x_e[31] = 0;
+
+subject to task_distance[32]:
+	-u[32] + x_s[29] - x_e[32] = 0;
+
+subject to task_distance[33]:
+	-u[33] + x_s[33] - x_e[32] = 0;
+
+subject to task_distance[34]:
+	-u[34] + x_s[34] - x_e[4] = 0;
+
+subject to task_distance[35]:
+	-u[35] + x_s[8] - x_e[35] = 0;
+
+subject to task_distance[36]:
+	-u[36] + x_s[36] - x_e[6] = 0;
+
+subject to task_distance[37]:
+	-u[37] + x_s[29] - x_e[25] = 0;
+
+subject to task_distance[38]:
+	-u[38] + x_s[5] - x_e[32] = 0;
+
+subject to task_distance[39]:
+	-u[39] + x_s[24] - x_e[19] = 0;
+
+subject to task_distance[40]:
+	-u[40] + x_s[4] - x_e[19] = 0;
+
+subject to interval_constraint1[1]:
+	-x_e[1] - a2[1] <= -69306300;
+
+subject to interval_constraint1[2]:
+	-x_e[2] - a2[2] <= -140453000;
+
+subject to interval_constraint1[3]:
+	-x_e[3] - a2[3] <= -431445000;
+
+subject to interval_constraint1[4]:
+	-x_e[4] - a2[4] <= -658627000;
+
+subject to interval_constraint1[5]:
+	-x_e[5] - a2[5] <= -953437000;
+
+subject to interval_constraint1[6]:
+	-x_e[6] - a2[6] <= -131028000;
+
+subject to interval_constraint1[7]:
+	-x_e[7] - a2[7] <= -410712000;
+
+subject to interval_constraint1[8]:
+	-x_e[8] - a2[8] <= -566704000;
+
+subject to interval_constraint1[9]:
+	-x_e[9] - a2[9] <= -719414000;
+
+subject to interval_constraint1[10]:
+	-x_e[10] - a2[10] <= -96861500;
+
+subject to interval_constraint1[11]:
+	-x_e[11] - a2[11] <= -223905000;
+
+subject to interval_constraint1[12]:
+	-x_e[12] - a2[12] <= -196031000;
+
+subject to interval_constraint1[13]:
+	-x_e[13] - a2[13] <= -337526000;
+
+subject to interval_constraint1[14]:
+	-x_e[14] - a2[14] <= -842942000;
+
+subject to interval_constraint1[15]:
+	-x_e[15] - a2[15] <= -987533000;
+
+subject to interval_constraint1[16]:
+	-x_e[16] - a2[16] <= -120121000;
+
+subject to interval_constraint1[17]:
+	-x_e[17] - a2[17] <= -260729000;
+
+subject to interval_constraint1[18]:
+	-x_e[18] - a2[18] <= -769771000;
+
+subject to interval_constraint1[19]:
+	-x_e[19] - a2[19] <= -301964000;
+
+subject to interval_constraint1[20]:
+	-x_e[20] - a2[20] <= -519918000;
+
+subject to interval_constraint1[21]:
+	-x_e[21] - a2[21] <= -944434000;
+
+subject to interval_constraint1[22]:
+	-x_e[22] - a2[22] <= -296460000;
+
+subject to interval_constraint1[23]:
+	-x_e[23] - a2[23] <= -445144000;
+
+subject to interval_constraint1[24]:
+	-x_e[24] - a2[24] <= -659454000;
+
+subject to interval_constraint1[25]:
+	-x_e[25] - a2[25] <= -290308000;
+
+subject to interval_constraint1[26]:
+	-x_e[26] - a2[26] <= -168378000;
+
+subject to interval_constraint1[27]:
+	-x_e[27] - a2[27] <= -134405000;
+
+subject to interval_constraint1[28]:
+	-x_e[28] - a2[28] <= -308792000;
+
+subject to interval_constraint1[29]:
+	-x_e[29] - a2[29] <= -652352000;
+
+subject to interval_constraint1[30]:
+	-x_e[30] - a2[30] <= -958437000;
+
+subject to interval_constraint1[31]:
+	-x_e[31] - a2[31] <= -102291000;
+
+subject to interval_constraint1[32]:
+	-x_e[32] - a2[32] <= -345579000;
+
+subject to interval_constraint1[33]:
+	-x_e[33] - a2[33] <= -373652000;
+
+subject to interval_constraint1[34]:
+	-x_e[34] - a2[34] <= -919278000;
+
+subject to interval_constraint1[35]:
+	-x_e[35] - a2[35] <= -301740000;
+
+subject to interval_constraint1[36]:
+	-x_e[36] - a2[36] <= -570272000;
+
+subject to interval_constraint2[1]:
+	x_e[1] - a3[1] <= 107850000;
+
+subject to interval_constraint2[2]:
+	x_e[2] - a3[2] <= 427815000;
+
+subject to interval_constraint2[3]:
+	x_e[3] - a3[3] <= 542285000;
+
+subject to interval_constraint2[4]:
+	x_e[4] - a3[4] <= 846048000;
+
+subject to interval_constraint2[5]:
+	x_e[5] - a3[5] <= 1e+09;
+
+subject to interval_constraint2[6]:
+	x_e[6] - a3[6] <= 447863000;
+
+subject to interval_constraint2[7]:
+	x_e[7] - a3[7] <= 641300000;
+
+subject to interval_constraint2[8]:
+	x_e[8] - a3[8] <= 844420000;
+
+subject to interval_constraint2[9]:
+	x_e[9] - a3[9] <= 961788000;
+
+subject to interval_constraint2[10]:
+	x_e[10] - a3[10] <= 442338000;
+
+subject to interval_constraint2[11]:
+	x_e[11] - a3[11] <= 649617000;
+
+subject to interval_constraint2[12]:
+	x_e[12] - a3[12] <= 735716000;
+
+subject to interval_constraint2[13]:
+	x_e[13] - a3[13] <= 800105000;
+
+subject to interval_constraint2[14]:
+	x_e[14] - a3[14] <= 1e+09;
+
+subject to interval_constraint2[15]:
+	x_e[15] - a3[15] <= 1e+09;
+
+subject to interval_constraint2[16]:
+	x_e[16] - a3[16] <= 140008000;
+
+subject to interval_constraint2[17]:
+	x_e[17] - a3[17] <= 627146000;
+
+subject to interval_constraint2[18]:
+	x_e[18] - a3[18] <= 948629000;
+
+subject to interval_constraint2[19]:
+	x_e[19] - a3[19] <= 393913000;
+
+subject to interval_constraint2[20]:
+	x_e[20] - a3[20] <= 1e+09;
+
+subject to interval_constraint2[21]:
+	x_e[21] - a3[21] <= 964890000;
+
+subject to interval_constraint2[22]:
+	x_e[22] - a3[22] <= 531668000;
+
+subject to interval_constraint2[23]:
+	x_e[23] - a3[23] <= 535706000;
+
+subject to interval_constraint2[24]:
+	x_e[24] - a3[24] <= 1e+09;
+
+subject to interval_constraint2[25]:
+	x_e[25] - a3[25] <= 685101000;
+
+subject to interval_constraint2[26]:
+	x_e[26] - a3[26] <= 1e+09;
+
+subject to interval_constraint2[27]:
+	x_e[27] - a3[27] <= 296711000;
+
+subject to interval_constraint2[28]:
+	x_e[28] - a3[28] <= 644771000;
+
+subject to interval_constraint2[29]:
+	x_e[29] - a3[29] <= 1e+09;
+
+subject to interval_constraint2[30]:
+	x_e[30] - a3[30] <= 1e+09;
+
+subject to interval_constraint2[31]:
+	x_e[31] - a3[31] <= 169023000;
+
+subject to interval_constraint2[32]:
+	x_e[32] - a3[32] <= 742054000;
+
+subject to interval_constraint2[33]:
+	x_e[33] - a3[33] <= 755277000;
+
+subject to interval_constraint2[34]:
+	x_e[34] - a3[34] <= 990211000;
+
+subject to interval_constraint2[35]:
+	x_e[35] - a3[35] <= 1e+09;
+
+subject to interval_constraint2[36]:
+	x_e[36] - a3[36] <= 1e+09;
+
+subject to dependency_constraint1[1]:
+	u[1] + a4[1] >= 2164600;
+
+subject to dependency_constraint1[2]:
+	u[2] + a4[2] >= 643762000;
+
+subject to dependency_constraint1[3]:
+	u[3] + a4[3] >= 38590000;
+
+subject to dependency_constraint1[4]:
+	u[4] + a4[4] >= 18236600;
+
+subject to dependency_constraint1[5]:
+	u[5] + a4[5] >= 22534000;
+
+subject to dependency_constraint1[6]:
+	u[6] + a4[6] >= 537631000;
+
+subject to dependency_constraint1[7]:
+	u[7] + a4[7] >= 114472000;
+
+subject to dependency_constraint1[8]:
+	u[8] + a4[8] >= 243297000;
+
+subject to dependency_constraint1[9]:
+	u[9] + a4[9] >= 775531000;
+
+subject to dependency_constraint1[10]:
+	u[10] + a4[10] >= 184664000;
+
+subject to dependency_constraint1[11]:
+	u[11] + a4[11] >= 120946000;
+
+subject to dependency_constraint1[12]:
+	u[12] + a4[12] >= 300986000;
+
+subject to dependency_constraint1[13]:
+	u[13] + a4[13] >= 16666000;
+
+subject to dependency_constraint1[14]:
+	u[14] + a4[14] >= 8280480;
+
+subject to dependency_constraint1[15]:
+	u[15] + a4[15] >= 620318000;
+
+subject to dependency_constraint1[16]:
+	u[16] + a4[16] >= 488149000;
+
+subject to dependency_constraint1[17]:
+	u[17] + a4[17] >= 99542100;
+
+subject to dependency_constraint1[18]:
+	u[18] + a4[18] >= 125978000;
+
+subject to dependency_constraint1[19]:
+	u[19] + a4[19] >= 87265100;
+
+subject to dependency_constraint1[20]:
+	u[20] + a4[20] >= 209163000;
+
+subject to dependency_constraint1[21]:
+	u[21] + a4[21] >= 505053000;
+
+subject to dependency_constraint1[22]:
+	u[22] + a4[22] >= 451553000;
+
+subject to dependency_constraint1[23]:
+	u[23] + a4[23] >= 266951000;
+
+subject to dependency_constraint1[24]:
+	u[24] + a4[24] >= 364729000;
+
+subject to dependency_constraint1[25]:
+	u[25] + a4[25] >= 70561800;
+
+subject to dependency_constraint1[26]:
+	u[26] + a4[26] >= 29817800;
+
+subject to dependency_constraint1[27]:
+	u[27] + a4[27] >= 271274000;
+
+subject to dependency_constraint1[28]:
+	u[28] + a4[28] >= 295289000;
+
+subject to dependency_constraint1[29]:
+	u[29] + a4[29] >= 109147000;
+
+subject to dependency_constraint1[30]:
+	u[30] + a4[30] >= 452606000;
+
+subject to dependency_constraint1[31]:
+	u[31] + a4[31] >= 1784710;
+
+subject to dependency_constraint1[32]:
+	u[32] + a4[32] >= 6236630;
+
+subject to dependency_constraint1[33]:
+	u[33] + a4[33] >= 54054100;
+
+subject to dependency_constraint1[34]:
+	u[34] + a4[34] >= 112864000;
+
+subject to dependency_constraint1[35]:
+	u[35] + a4[35] >= 12613200;
+
+subject to dependency_constraint1[36]:
+	u[36] + a4[36] >= 300935000;
+
+subject to dependency_constraint1[37]:
+	u[37] + a4[37] >= 24256300;
+
+subject to dependency_constraint1[38]:
+	u[38] + a4[38] >= 96273000;
+
+subject to dependency_constraint1[39]:
+	u[39] + a4[39] >= 235177000;
+
+subject to dependency_constraint1[40]:
+	u[40] + a4[40] >= 102539000;
+
+subject to dependency_constraint2[1]:
+	u[1] - a5[1] <= 316170000;
+
+subject to dependency_constraint2[2]:
+	u[2] - a5[2] <= 775596000;
+
+subject to dependency_constraint2[3]:
+	u[3] - a5[3] <= 184613000;
+
+subject to dependency_constraint2[4]:
+	u[4] - a5[4] <= 564735000;
+
+subject to dependency_constraint2[5]:
+	u[5] - a5[5] <= 618185000;
+
+subject to dependency_constraint2[6]:
+	u[6] - a5[6] <= 809064000;
+
+subject to dependency_constraint2[7]:
+	u[7] - a5[7] <= 407944000;
+
+subject to dependency_constraint2[8]:
+	u[8] - a5[8] <= 607629000;
+
+subject to dependency_constraint2[9]:
+	u[9] - a5[9] <= 889953000;
+
+subject to dependency_constraint2[10]:
+	u[10] - a5[10] <= 698260000;
+
+subject to dependency_constraint2[11]:
+	u[11] - a5[11] <= 319082000;
+
+subject to dependency_constraint2[12]:
+	u[12] - a5[12] <= 624861000;
+
+subject to dependency_constraint2[13]:
+	u[13] - a5[13] <= 73928900;
+
+subject to dependency_constraint2[14]:
+	u[14] - a5[14] <= 540472000;
+
+subject to dependency_constraint2[15]:
+	u[15] - a5[15] <= 952424000;
+
+subject to dependency_constraint2[16]:
+	u[16] - a5[16] <= 488490000;
+
+subject to dependency_constraint2[17]:
+	u[17] - a5[17] <= 315309000;
+
+subject to dependency_constraint2[18]:
+	u[18] - a5[18] <= 283895000;
+
+subject to dependency_constraint2[19]:
+	u[19] - a5[19] <= 275632000;
+
+subject to dependency_constraint2[20]:
+	u[20] - a5[20] <= 428808000;
+
+subject to dependency_constraint2[21]:
+	u[21] - a5[21] <= 696227000;
+
+subject to dependency_constraint2[22]:
+	u[22] - a5[22] <= 952424000;
+
+subject to dependency_constraint2[23]:
+	u[23] - a5[23] <= 531548000;
+
+subject to dependency_constraint2[24]:
+	u[24] - a5[24] <= 611979000;
+
+subject to dependency_constraint2[25]:
+	u[25] - a5[25] <= 491822000;
+
+subject to dependency_constraint2[26]:
+	u[26] - a5[26] <= 119671000;
+
+subject to dependency_constraint2[27]:
+	u[27] - a5[27] <= 884254000;
+
+subject to dependency_constraint2[28]:
+	u[28] - a5[28] <= 459780000;
+
+subject to dependency_constraint2[29]:
+	u[29] - a5[29] <= 415619000;
+
+subject to dependency_constraint2[30]:
+	u[30] - a5[30] <= 830040000;
+
+subject to dependency_constraint2[31]:
+	u[31] - a5[31] <= 106009000;
+
+subject to dependency_constraint2[32]:
+	u[32] - a5[32] <= 286457000;
+
+subject to dependency_constraint2[33]:
+	u[33] - a5[33] <= 513805000;
+
+subject to dependency_constraint2[34]:
+	u[34] - a5[34] <= 228042000;
+
+subject to dependency_constraint2[35]:
+	u[35] - a5[35] <= 430354000;
+
+subject to dependency_constraint2[36]:
+	u[36] - a5[36] <= 710996000;
+
+subject to dependency_constraint2[37]:
+	u[37] - a5[37] <= 255937000;
+
+subject to dependency_constraint2[38]:
+	u[38] - a5[38] <= 634819000;
+
+subject to dependency_constraint2[39]:
+	u[39] - a5[39] <= 534235000;
+
+subject to dependency_constraint2[40]:
+	u[40] - a5[40] <= 394325000;
+
+subject to identical_index[1,1]:
+	y[1,1,1] = 0;
+
+subject to identical_index[1,2]:
+	y[1,2,2] = 0;
+
+subject to identical_index[1,3]:
+	y[1,3,3] = 0;
+
+subject to identical_index[1,4]:
+	y[1,4,4] = 0;
+
+subject to identical_index[1,5]:
+	y[1,5,5] = 0;
+
+subject to identical_index[1,6]:
+	y[1,6,6] = 0;
+
+subject to identical_index[1,7]:
+	y[1,7,7] = 0;
+
+subject to identical_index[1,8]:
+	y[1,8,8] = 0;
+
+subject to identical_index[1,9]:
+	y[1,9,9] = 0;
+
+subject to identical_index[1,10]:
+	y[1,10,10] = 0;
+
+subject to identical_index[1,11]:
+	y[1,11,11] = 0;
+
+subject to identical_index[1,12]:
+	y[1,12,12] = 0;
+
+subject to identical_index[1,13]:
+	y[1,13,13] = 0;
+
+subject to identical_index[1,14]:
+	y[1,14,14] = 0;
+
+subject to identical_index[1,15]:
+	y[1,15,15] = 0;
+
+subject to identical_index[1,16]:
+	y[1,16,16] = 0;
+
+subject to identical_index[1,17]:
+	y[1,17,17] = 0;
+
+subject to identical_index[1,18]:
+	y[1,18,18] = 0;
+
+subject to identical_index[1,19]:
+	y[1,19,19] = 0;
+
+subject to identical_index[1,20]:
+	y[1,20,20] = 0;
+
+subject to identical_index[1,21]:
+	y[1,21,21] = 0;
+
+subject to identical_index[1,22]:
+	y[1,22,22] = 0;
+
+subject to identical_index[1,23]:
+	y[1,23,23] = 0;
+
+subject to identical_index[1,24]:
+	y[1,24,24] = 0;
+
+subject to identical_index[1,25]:
+	y[1,25,25] = 0;
+
+subject to identical_index[1,26]:
+	y[1,26,26] = 0;
+
+subject to identical_index[1,27]:
+	y[1,27,27] = 0;
+
+subject to identical_index[1,28]:
+	y[1,28,28] = 0;
+
+subject to identical_index[1,29]:
+	y[1,29,29] = 0;
+
+subject to identical_index[1,30]:
+	y[1,30,30] = 0;
+
+subject to identical_index[1,31]:
+	y[1,31,31] = 0;
+
+subject to identical_index[1,32]:
+	y[1,32,32] = 0;
+
+subject to identical_index[1,33]:
+	y[1,33,33] = 0;
+
+subject to identical_index[1,34]:
+	y[1,34,34] = 0;
+
+subject to identical_index[1,35]:
+	y[1,35,35] = 0;
+
+subject to identical_index[1,36]:
+	y[1,36,36] = 0;
+
+subject to identical_index[2,1]:
+	y[2,1,1] = 0;
+
+subject to identical_index[2,2]:
+	y[2,2,2] = 0;
+
+subject to identical_index[2,3]:
+	y[2,3,3] = 0;
+
+subject to identical_index[2,4]:
+	y[2,4,4] = 0;
+
+subject to identical_index[2,5]:
+	y[2,5,5] = 0;
+
+subject to identical_index[2,6]:
+	y[2,6,6] = 0;
+
+subject to identical_index[2,7]:
+	y[2,7,7] = 0;
+
+subject to identical_index[2,8]:
+	y[2,8,8] = 0;
+
+subject to identical_index[2,9]:
+	y[2,9,9] = 0;
+
+subject to identical_index[2,10]:
+	y[2,10,10] = 0;
+
+subject to identical_index[2,11]:
+	y[2,11,11] = 0;
+
+subject to identical_index[2,12]:
+	y[2,12,12] = 0;
+
+subject to identical_index[2,13]:
+	y[2,13,13] = 0;
+
+subject to identical_index[2,14]:
+	y[2,14,14] = 0;
+
+subject to identical_index[2,15]:
+	y[2,15,15] = 0;
+
+subject to identical_index[2,16]:
+	y[2,16,16] = 0;
+
+subject to identical_index[2,17]:
+	y[2,17,17] = 0;
+
+subject to identical_index[2,18]:
+	y[2,18,18] = 0;
+
+subject to identical_index[2,19]:
+	y[2,19,19] = 0;
+
+subject to identical_index[2,20]:
+	y[2,20,20] = 0;
+
+subject to identical_index[2,21]:
+	y[2,21,21] = 0;
+
+subject to identical_index[2,22]:
+	y[2,22,22] = 0;
+
+subject to identical_index[2,23]:
+	y[2,23,23] = 0;
+
+subject to identical_index[2,24]:
+	y[2,24,24] = 0;
+
+subject to identical_index[2,25]:
+	y[2,25,25] = 0;
+
+subject to identical_index[2,26]:
+	y[2,26,26] = 0;
+
+subject to identical_index[2,27]:
+	y[2,27,27] = 0;
+
+subject to identical_index[2,28]:
+	y[2,28,28] = 0;
+
+subject to identical_index[2,29]:
+	y[2,29,29] = 0;
+
+subject to identical_index[2,30]:
+	y[2,30,30] = 0;
+
+subject to identical_index[2,31]:
+	y[2,31,31] = 0;
+
+subject to identical_index[2,32]:
+	y[2,32,32] = 0;
+
+subject to identical_index[2,33]:
+	y[2,33,33] = 0;
+
+subject to identical_index[2,34]:
+	y[2,34,34] = 0;
+
+subject to identical_index[2,35]:
+	y[2,35,35] = 0;
+
+subject to identical_index[2,36]:
+	y[2,36,36] = 0;
+
+subject to identical_index[3,1]:
+	y[3,1,1] = 0;
+
+subject to identical_index[3,2]:
+	y[3,2,2] = 0;
+
+subject to identical_index[3,3]:
+	y[3,3,3] = 0;
+
+subject to identical_index[3,4]:
+	y[3,4,4] = 0;
+
+subject to identical_index[3,5]:
+	y[3,5,5] = 0;
+
+subject to identical_index[3,6]:
+	y[3,6,6] = 0;
+
+subject to identical_index[3,7]:
+	y[3,7,7] = 0;
+
+subject to identical_index[3,8]:
+	y[3,8,8] = 0;
+
+subject to identical_index[3,9]:
+	y[3,9,9] = 0;
+
+subject to identical_index[3,10]:
+	y[3,10,10] = 0;
+
+subject to identical_index[3,11]:
+	y[3,11,11] = 0;
+
+subject to identical_index[3,12]:
+	y[3,12,12] = 0;
+
+subject to identical_index[3,13]:
+	y[3,13,13] = 0;
+
+subject to identical_index[3,14]:
+	y[3,14,14] = 0;
+
+subject to identical_index[3,15]:
+	y[3,15,15] = 0;
+
+subject to identical_index[3,16]:
+	y[3,16,16] = 0;
+
+subject to identical_index[3,17]:
+	y[3,17,17] = 0;
+
+subject to identical_index[3,18]:
+	y[3,18,18] = 0;
+
+subject to identical_index[3,19]:
+	y[3,19,19] = 0;
+
+subject to identical_index[3,20]:
+	y[3,20,20] = 0;
+
+subject to identical_index[3,21]:
+	y[3,21,21] = 0;
+
+subject to identical_index[3,22]:
+	y[3,22,22] = 0;
+
+subject to identical_index[3,23]:
+	y[3,23,23] = 0;
+
+subject to identical_index[3,24]:
+	y[3,24,24] = 0;
+
+subject to identical_index[3,25]:
+	y[3,25,25] = 0;
+
+subject to identical_index[3,26]:
+	y[3,26,26] = 0;
+
+subject to identical_index[3,27]:
+	y[3,27,27] = 0;
+
+subject to identical_index[3,28]:
+	y[3,28,28] = 0;
+
+subject to identical_index[3,29]:
+	y[3,29,29] = 0;
+
+subject to identical_index[3,30]:
+	y[3,30,30] = 0;
+
+subject to identical_index[3,31]:
+	y[3,31,31] = 0;
+
+subject to identical_index[3,32]:
+	y[3,32,32] = 0;
+
+subject to identical_index[3,33]:
+	y[3,33,33] = 0;
+
+subject to identical_index[3,34]:
+	y[3,34,34] = 0;
+
+subject to identical_index[3,35]:
+	y[3,35,35] = 0;
+
+subject to identical_index[3,36]:
+	y[3,36,36] = 0;
+
+subject to identical_index[4,1]:
+	y[4,1,1] = 0;
+
+subject to identical_index[4,2]:
+	y[4,2,2] = 0;
+
+subject to identical_index[4,3]:
+	y[4,3,3] = 0;
+
+subject to identical_index[4,4]:
+	y[4,4,4] = 0;
+
+subject to identical_index[4,5]:
+	y[4,5,5] = 0;
+
+subject to identical_index[4,6]:
+	y[4,6,6] = 0;
+
+subject to identical_index[4,7]:
+	y[4,7,7] = 0;
+
+subject to identical_index[4,8]:
+	y[4,8,8] = 0;
+
+subject to identical_index[4,9]:
+	y[4,9,9] = 0;
+
+subject to identical_index[4,10]:
+	y[4,10,10] = 0;
+
+subject to identical_index[4,11]:
+	y[4,11,11] = 0;
+
+subject to identical_index[4,12]:
+	y[4,12,12] = 0;
+
+subject to identical_index[4,13]:
+	y[4,13,13] = 0;
+
+subject to identical_index[4,14]:
+	y[4,14,14] = 0;
+
+subject to identical_index[4,15]:
+	y[4,15,15] = 0;
+
+subject to identical_index[4,16]:
+	y[4,16,16] = 0;
+
+subject to identical_index[4,17]:
+	y[4,17,17] = 0;
+
+subject to identical_index[4,18]:
+	y[4,18,18] = 0;
+
+subject to identical_index[4,19]:
+	y[4,19,19] = 0;
+
+subject to identical_index[4,20]:
+	y[4,20,20] = 0;
+
+subject to identical_index[4,21]:
+	y[4,21,21] = 0;
+
+subject to identical_index[4,22]:
+	y[4,22,22] = 0;
+
+subject to identical_index[4,23]:
+	y[4,23,23] = 0;
+
+subject to identical_index[4,24]:
+	y[4,24,24] = 0;
+
+subject to identical_index[4,25]:
+	y[4,25,25] = 0;
+
+subject to identical_index[4,26]:
+	y[4,26,26] = 0;
+
+subject to identical_index[4,27]:
+	y[4,27,27] = 0;
+
+subject to identical_index[4,28]:
+	y[4,28,28] = 0;
+
+subject to identical_index[4,29]:
+	y[4,29,29] = 0;
+
+subject to identical_index[4,30]:
+	y[4,30,30] = 0;
+
+subject to identical_index[4,31]:
+	y[4,31,31] = 0;
+
+subject to identical_index[4,32]:
+	y[4,32,32] = 0;
+
+subject to identical_index[4,33]:
+	y[4,33,33] = 0;
+
+subject to identical_index[4,34]:
+	y[4,34,34] = 0;
+
+subject to identical_index[4,35]:
+	y[4,35,35] = 0;
+
+subject to identical_index[4,36]:
+	y[4,36,36] = 0;
+
+subject to identical_index[5,1]:
+	y[5,1,1] = 0;
+
+subject to identical_index[5,2]:
+	y[5,2,2] = 0;
+
+subject to identical_index[5,3]:
+	y[5,3,3] = 0;
+
+subject to identical_index[5,4]:
+	y[5,4,4] = 0;
+
+subject to identical_index[5,5]:
+	y[5,5,5] = 0;
+
+subject to identical_index[5,6]:
+	y[5,6,6] = 0;
+
+subject to identical_index[5,7]:
+	y[5,7,7] = 0;
+
+subject to identical_index[5,8]:
+	y[5,8,8] = 0;
+
+subject to identical_index[5,9]:
+	y[5,9,9] = 0;
+
+subject to identical_index[5,10]:
+	y[5,10,10] = 0;
+
+subject to identical_index[5,11]:
+	y[5,11,11] = 0;
+
+subject to identical_index[5,12]:
+	y[5,12,12] = 0;
+
+subject to identical_index[5,13]:
+	y[5,13,13] = 0;
+
+subject to identical_index[5,14]:
+	y[5,14,14] = 0;
+
+subject to identical_index[5,15]:
+	y[5,15,15] = 0;
+
+subject to identical_index[5,16]:
+	y[5,16,16] = 0;
+
+subject to identical_index[5,17]:
+	y[5,17,17] = 0;
+
+subject to identical_index[5,18]:
+	y[5,18,18] = 0;
+
+subject to identical_index[5,19]:
+	y[5,19,19] = 0;
+
+subject to identical_index[5,20]:
+	y[5,20,20] = 0;
+
+subject to identical_index[5,21]:
+	y[5,21,21] = 0;
+
+subject to identical_index[5,22]:
+	y[5,22,22] = 0;
+
+subject to identical_index[5,23]:
+	y[5,23,23] = 0;
+
+subject to identical_index[5,24]:
+	y[5,24,24] = 0;
+
+subject to identical_index[5,25]:
+	y[5,25,25] = 0;
+
+subject to identical_index[5,26]:
+	y[5,26,26] = 0;
+
+subject to identical_index[5,27]:
+	y[5,27,27] = 0;
+
+subject to identical_index[5,28]:
+	y[5,28,28] = 0;
+
+subject to identical_index[5,29]:
+	y[5,29,29] = 0;
+
+subject to identical_index[5,30]:
+	y[5,30,30] = 0;
+
+subject to identical_index[5,31]:
+	y[5,31,31] = 0;
+
+subject to identical_index[5,32]:
+	y[5,32,32] = 0;
+
+subject to identical_index[5,33]:
+	y[5,33,33] = 0;
+
+subject to identical_index[5,34]:
+	y[5,34,34] = 0;
+
+subject to identical_index[5,35]:
+	y[5,35,35] = 0;
+
+subject to identical_index[5,36]:
+	y[5,36,36] = 0;
+
+subject to identical_index[6,1]:
+	y[6,1,1] = 0;
+
+subject to identical_index[6,2]:
+	y[6,2,2] = 0;
+
+subject to identical_index[6,3]:
+	y[6,3,3] = 0;
+
+subject to identical_index[6,4]:
+	y[6,4,4] = 0;
+
+subject to identical_index[6,5]:
+	y[6,5,5] = 0;
+
+subject to identical_index[6,6]:
+	y[6,6,6] = 0;
+
+subject to identical_index[6,7]:
+	y[6,7,7] = 0;
+
+subject to identical_index[6,8]:
+	y[6,8,8] = 0;
+
+subject to identical_index[6,9]:
+	y[6,9,9] = 0;
+
+subject to identical_index[6,10]:
+	y[6,10,10] = 0;
+
+subject to identical_index[6,11]:
+	y[6,11,11] = 0;
+
+subject to identical_index[6,12]:
+	y[6,12,12] = 0;
+
+subject to identical_index[6,13]:
+	y[6,13,13] = 0;
+
+subject to identical_index[6,14]:
+	y[6,14,14] = 0;
+
+subject to identical_index[6,15]:
+	y[6,15,15] = 0;
+
+subject to identical_index[6,16]:
+	y[6,16,16] = 0;
+
+subject to identical_index[6,17]:
+	y[6,17,17] = 0;
+
+subject to identical_index[6,18]:
+	y[6,18,18] = 0;
+
+subject to identical_index[6,19]:
+	y[6,19,19] = 0;
+
+subject to identical_index[6,20]:
+	y[6,20,20] = 0;
+
+subject to identical_index[6,21]:
+	y[6,21,21] = 0;
+
+subject to identical_index[6,22]:
+	y[6,22,22] = 0;
+
+subject to identical_index[6,23]:
+	y[6,23,23] = 0;
+
+subject to identical_index[6,24]:
+	y[6,24,24] = 0;
+
+subject to identical_index[6,25]:
+	y[6,25,25] = 0;
+
+subject to identical_index[6,26]:
+	y[6,26,26] = 0;
+
+subject to identical_index[6,27]:
+	y[6,27,27] = 0;
+
+subject to identical_index[6,28]:
+	y[6,28,28] = 0;
+
+subject to identical_index[6,29]:
+	y[6,29,29] = 0;
+
+subject to identical_index[6,30]:
+	y[6,30,30] = 0;
+
+subject to identical_index[6,31]:
+	y[6,31,31] = 0;
+
+subject to identical_index[6,32]:
+	y[6,32,32] = 0;
+
+subject to identical_index[6,33]:
+	y[6,33,33] = 0;
+
+subject to identical_index[6,34]:
+	y[6,34,34] = 0;
+
+subject to identical_index[6,35]:
+	y[6,35,35] = 0;
+
+subject to identical_index[6,36]:
+	y[6,36,36] = 0;
+
+subject to identical_index[7,1]:
+	y[7,1,1] = 0;
+
+subject to identical_index[7,2]:
+	y[7,2,2] = 0;
+
+subject to identical_index[7,3]:
+	y[7,3,3] = 0;
+
+subject to identical_index[7,4]:
+	y[7,4,4] = 0;
+
+subject to identical_index[7,5]:
+	y[7,5,5] = 0;
+
+subject to identical_index[7,6]:
+	y[7,6,6] = 0;
+
+subject to identical_index[7,7]:
+	y[7,7,7] = 0;
+
+subject to identical_index[7,8]:
+	y[7,8,8] = 0;
+
+subject to identical_index[7,9]:
+	y[7,9,9] = 0;
+
+subject to identical_index[7,10]:
+	y[7,10,10] = 0;
+
+subject to identical_index[7,11]:
+	y[7,11,11] = 0;
+
+subject to identical_index[7,12]:
+	y[7,12,12] = 0;
+
+subject to identical_index[7,13]:
+	y[7,13,13] = 0;
+
+subject to identical_index[7,14]:
+	y[7,14,14] = 0;
+
+subject to identical_index[7,15]:
+	y[7,15,15] = 0;
+
+subject to identical_index[7,16]:
+	y[7,16,16] = 0;
+
+subject to identical_index[7,17]:
+	y[7,17,17] = 0;
+
+subject to identical_index[7,18]:
+	y[7,18,18] = 0;
+
+subject to identical_index[7,19]:
+	y[7,19,19] = 0;
+
+subject to identical_index[7,20]:
+	y[7,20,20] = 0;
+
+subject to identical_index[7,21]:
+	y[7,21,21] = 0;
+
+subject to identical_index[7,22]:
+	y[7,22,22] = 0;
+
+subject to identical_index[7,23]:
+	y[7,23,23] = 0;
+
+subject to identical_index[7,24]:
+	y[7,24,24] = 0;
+
+subject to identical_index[7,25]:
+	y[7,25,25] = 0;
+
+subject to identical_index[7,26]:
+	y[7,26,26] = 0;
+
+subject to identical_index[7,27]:
+	y[7,27,27] = 0;
+
+subject to identical_index[7,28]:
+	y[7,28,28] = 0;
+
+subject to identical_index[7,29]:
+	y[7,29,29] = 0;
+
+subject to identical_index[7,30]:
+	y[7,30,30] = 0;
+
+subject to identical_index[7,31]:
+	y[7,31,31] = 0;
+
+subject to identical_index[7,32]:
+	y[7,32,32] = 0;
+
+subject to identical_index[7,33]:
+	y[7,33,33] = 0;
+
+subject to identical_index[7,34]:
+	y[7,34,34] = 0;
+
+subject to identical_index[7,35]:
+	y[7,35,35] = 0;
+
+subject to identical_index[7,36]:
+	y[7,36,36] = 0;
+
+subject to identical_index[8,1]:
+	y[8,1,1] = 0;
+
+subject to identical_index[8,2]:
+	y[8,2,2] = 0;
+
+subject to identical_index[8,3]:
+	y[8,3,3] = 0;
+
+subject to identical_index[8,4]:
+	y[8,4,4] = 0;
+
+subject to identical_index[8,5]:
+	y[8,5,5] = 0;
+
+subject to identical_index[8,6]:
+	y[8,6,6] = 0;
+
+subject to identical_index[8,7]:
+	y[8,7,7] = 0;
+
+subject to identical_index[8,8]:
+	y[8,8,8] = 0;
+
+subject to identical_index[8,9]:
+	y[8,9,9] = 0;
+
+subject to identical_index[8,10]:
+	y[8,10,10] = 0;
+
+subject to identical_index[8,11]:
+	y[8,11,11] = 0;
+
+subject to identical_index[8,12]:
+	y[8,12,12] = 0;
+
+subject to identical_index[8,13]:
+	y[8,13,13] = 0;
+
+subject to identical_index[8,14]:
+	y[8,14,14] = 0;
+
+subject to identical_index[8,15]:
+	y[8,15,15] = 0;
+
+subject to identical_index[8,16]:
+	y[8,16,16] = 0;
+
+subject to identical_index[8,17]:
+	y[8,17,17] = 0;
+
+subject to identical_index[8,18]:
+	y[8,18,18] = 0;
+
+subject to identical_index[8,19]:
+	y[8,19,19] = 0;
+
+subject to identical_index[8,20]:
+	y[8,20,20] = 0;
+
+subject to identical_index[8,21]:
+	y[8,21,21] = 0;
+
+subject to identical_index[8,22]:
+	y[8,22,22] = 0;
+
+subject to identical_index[8,23]:
+	y[8,23,23] = 0;
+
+subject to identical_index[8,24]:
+	y[8,24,24] = 0;
+
+subject to identical_index[8,25]:
+	y[8,25,25] = 0;
+
+subject to identical_index[8,26]:
+	y[8,26,26] = 0;
+
+subject to identical_index[8,27]:
+	y[8,27,27] = 0;
+
+subject to identical_index[8,28]:
+	y[8,28,28] = 0;
+
+subject to identical_index[8,29]:
+	y[8,29,29] = 0;
+
+subject to identical_index[8,30]:
+	y[8,30,30] = 0;
+
+subject to identical_index[8,31]:
+	y[8,31,31] = 0;
+
+subject to identical_index[8,32]:
+	y[8,32,32] = 0;
+
+subject to identical_index[8,33]:
+	y[8,33,33] = 0;
+
+subject to identical_index[8,34]:
+	y[8,34,34] = 0;
+
+subject to identical_index[8,35]:
+	y[8,35,35] = 0;
+
+subject to identical_index[8,36]:
+	y[8,36,36] = 0;
+
+subject to identical_index[9,1]:
+	y[9,1,1] = 0;
+
+subject to identical_index[9,2]:
+	y[9,2,2] = 0;
+
+subject to identical_index[9,3]:
+	y[9,3,3] = 0;
+
+subject to identical_index[9,4]:
+	y[9,4,4] = 0;
+
+subject to identical_index[9,5]:
+	y[9,5,5] = 0;
+
+subject to identical_index[9,6]:
+	y[9,6,6] = 0;
+
+subject to identical_index[9,7]:
+	y[9,7,7] = 0;
+
+subject to identical_index[9,8]:
+	y[9,8,8] = 0;
+
+subject to identical_index[9,9]:
+	y[9,9,9] = 0;
+
+subject to identical_index[9,10]:
+	y[9,10,10] = 0;
+
+subject to identical_index[9,11]:
+	y[9,11,11] = 0;
+
+subject to identical_index[9,12]:
+	y[9,12,12] = 0;
+
+subject to identical_index[9,13]:
+	y[9,13,13] = 0;
+
+subject to identical_index[9,14]:
+	y[9,14,14] = 0;
+
+subject to identical_index[9,15]:
+	y[9,15,15] = 0;
+
+subject to identical_index[9,16]:
+	y[9,16,16] = 0;
+
+subject to identical_index[9,17]:
+	y[9,17,17] = 0;
+
+subject to identical_index[9,18]:
+	y[9,18,18] = 0;
+
+subject to identical_index[9,19]:
+	y[9,19,19] = 0;
+
+subject to identical_index[9,20]:
+	y[9,20,20] = 0;
+
+subject to identical_index[9,21]:
+	y[9,21,21] = 0;
+
+subject to identical_index[9,22]:
+	y[9,22,22] = 0;
+
+subject to identical_index[9,23]:
+	y[9,23,23] = 0;
+
+subject to identical_index[9,24]:
+	y[9,24,24] = 0;
+
+subject to identical_index[9,25]:
+	y[9,25,25] = 0;
+
+subject to identical_index[9,26]:
+	y[9,26,26] = 0;
+
+subject to identical_index[9,27]:
+	y[9,27,27] = 0;
+
+subject to identical_index[9,28]:
+	y[9,28,28] = 0;
+
+subject to identical_index[9,29]:
+	y[9,29,29] = 0;
+
+subject to identical_index[9,30]:
+	y[9,30,30] = 0;
+
+subject to identical_index[9,31]:
+	y[9,31,31] = 0;
+
+subject to identical_index[9,32]:
+	y[9,32,32] = 0;
+
+subject to identical_index[9,33]:
+	y[9,33,33] = 0;
+
+subject to identical_index[9,34]:
+	y[9,34,34] = 0;
+
+subject to identical_index[9,35]:
+	y[9,35,35] = 0;
+
+subject to identical_index[9,36]:
+	y[9,36,36] = 0;
+
+subject to identical_index[10,1]:
+	y[10,1,1] = 0;
+
+subject to identical_index[10,2]:
+	y[10,2,2] = 0;
+
+subject to identical_index[10,3]:
+	y[10,3,3] = 0;
+
+subject to identical_index[10,4]:
+	y[10,4,4] = 0;
+
+subject to identical_index[10,5]:
+	y[10,5,5] = 0;
+
+subject to identical_index[10,6]:
+	y[10,6,6] = 0;
+
+subject to identical_index[10,7]:
+	y[10,7,7] = 0;
+
+subject to identical_index[10,8]:
+	y[10,8,8] = 0;
+
+subject to identical_index[10,9]:
+	y[10,9,9] = 0;
+
+subject to identical_index[10,10]:
+	y[10,10,10] = 0;
+
+subject to identical_index[10,11]:
+	y[10,11,11] = 0;
+
+subject to identical_index[10,12]:
+	y[10,12,12] = 0;
+
+subject to identical_index[10,13]:
+	y[10,13,13] = 0;
+
+subject to identical_index[10,14]:
+	y[10,14,14] = 0;
+
+subject to identical_index[10,15]:
+	y[10,15,15] = 0;
+
+subject to identical_index[10,16]:
+	y[10,16,16] = 0;
+
+subject to identical_index[10,17]:
+	y[10,17,17] = 0;
+
+subject to identical_index[10,18]:
+	y[10,18,18] = 0;
+
+subject to identical_index[10,19]:
+	y[10,19,19] = 0;
+
+subject to identical_index[10,20]:
+	y[10,20,20] = 0;
+
+subject to identical_index[10,21]:
+	y[10,21,21] = 0;
+
+subject to identical_index[10,22]:
+	y[10,22,22] = 0;
+
+subject to identical_index[10,23]:
+	y[10,23,23] = 0;
+
+subject to identical_index[10,24]:
+	y[10,24,24] = 0;
+
+subject to identical_index[10,25]:
+	y[10,25,25] = 0;
+
+subject to identical_index[10,26]:
+	y[10,26,26] = 0;
+
+subject to identical_index[10,27]:
+	y[10,27,27] = 0;
+
+subject to identical_index[10,28]:
+	y[10,28,28] = 0;
+
+subject to identical_index[10,29]:
+	y[10,29,29] = 0;
+
+subject to identical_index[10,30]:
+	y[10,30,30] = 0;
+
+subject to identical_index[10,31]:
+	y[10,31,31] = 0;
+
+subject to identical_index[10,32]:
+	y[10,32,32] = 0;
+
+subject to identical_index[10,33]:
+	y[10,33,33] = 0;
+
+subject to identical_index[10,34]:
+	y[10,34,34] = 0;
+
+subject to identical_index[10,35]:
+	y[10,35,35] = 0;
+
+subject to identical_index[10,36]:
+	y[10,36,36] = 0;
+
+subject to unique_start_end[1,1]:
+	y_s[1,1] + y_e[1,1] <= 1;
+
+subject to unique_start_end[1,2]:
+	y_s[1,2] + y_e[1,2] <= 1;
+
+subject to unique_start_end[1,3]:
+	y_s[1,3] + y_e[1,3] <= 1;
+
+subject to unique_start_end[1,4]:
+	y_s[1,4] + y_e[1,4] <= 1;
+
+subject to unique_start_end[1,5]:
+	y_s[1,5] + y_e[1,5] <= 1;
+
+subject to unique_start_end[2,6]:
+	y_s[2,6] + y_e[2,6] <= 1;
+
+subject to unique_start_end[2,7]:
+	y_s[2,7] + y_e[2,7] <= 1;
+
+subject to unique_start_end[2,8]:
+	y_s[2,8] + y_e[2,8] <= 1;
+
+subject to unique_start_end[2,9]:
+	y_s[2,9] + y_e[2,9] <= 1;
+
+subject to unique_start_end[3,10]:
+	y_s[3,10] + y_e[3,10] <= 1;
+
+subject to unique_start_end[3,11]:
+	y_s[3,11] + y_e[3,11] <= 1;
+
+subject to unique_start_end[3,12]:
+	y_s[3,12] + y_e[3,12] <= 1;
+
+subject to unique_start_end[3,13]:
+	y_s[3,13] + y_e[3,13] <= 1;
+
+subject to unique_start_end[3,14]:
+	y_s[3,14] + y_e[3,14] <= 1;
+
+subject to unique_start_end[3,15]:
+	y_s[3,15] + y_e[3,15] <= 1;
+
+subject to unique_start_end[4,16]:
+	y_s[4,16] + y_e[4,16] <= 1;
+
+subject to unique_start_end[4,17]:
+	y_s[4,17] + y_e[4,17] <= 1;
+
+subject to unique_start_end[4,18]:
+	y_s[4,18] + y_e[4,18] <= 1;
+
+subject to unique_start_end[5,19]:
+	y_s[5,19] + y_e[5,19] <= 1;
+
+subject to unique_start_end[5,20]:
+	y_s[5,20] + y_e[5,20] <= 1;
+
+subject to unique_start_end[5,21]:
+	y_s[5,21] + y_e[5,21] <= 1;
+
+subject to unique_start_end[6,22]:
+	y_s[6,22] + y_e[6,22] <= 1;
+
+subject to unique_start_end[6,23]:
+	y_s[6,23] + y_e[6,23] <= 1;
+
+subject to unique_start_end[6,24]:
+	y_s[6,24] + y_e[6,24] <= 1;
+
+subject to unique_start_end[7,25]:
+	y_s[7,25] + y_e[7,25] <= 1;
+
+subject to unique_start_end[7,26]:
+	y_s[7,26] + y_e[7,26] <= 1;
+
+subject to unique_start_end[8,27]:
+	y_s[8,27] + y_e[8,27] <= 1;
+
+subject to unique_start_end[8,28]:
+	y_s[8,28] + y_e[8,28] <= 1;
+
+subject to unique_start_end[8,29]:
+	y_s[8,29] + y_e[8,29] <= 1;
+
+subject to unique_start_end[8,30]:
+	y_s[8,30] + y_e[8,30] <= 1;
+
+subject to unique_start_end[9,31]:
+	y_s[9,31] + y_e[9,31] <= 1;
+
+subject to unique_start_end[9,32]:
+	y_s[9,32] + y_e[9,32] <= 1;
+
+subject to unique_start_end[9,33]:
+	y_s[9,33] + y_e[9,33] <= 1;
+
+subject to unique_start_end[9,34]:
+	y_s[9,34] + y_e[9,34] <= 1;
+
+subject to unique_start_end[10,35]:
+	y_s[10,35] + y_e[10,35] <= 1;
+
+subject to unique_start_end[10,36]:
+	y_s[10,36] + y_e[10,36] <= 1;
+

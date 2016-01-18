@@ -1,0 +1,523 @@
+## LNSModelList.run file
+# Run file for LNS heuristic using so called 'active destroy'.
+# Created by: Claes Arvidson and Akdas Hossain
+
+#-----------------------------------
+# Command file: LNSmodelList.run
+#-----------------------------------
+
+reset;                     
+option solver cplexamp;    # Choice of CPLEX
+#option presolve 0;
+option omit_zero_cols 1;   # Formatting options
+option omit_zero_rows 1;   
+option display_1col 10000; 
+option cplex_options "timing 1 mipdisplay 2 time=3"; # To record time
+option display_precision 5;
+option randseed 19;
+
+model ***MODFILE***;   # Read in the model file 
+data ***DATAFILE***;   # Read in the data file 
+
+#Define a complete problem using names of conditions and objective functions found in the model file, solving this problem finds the first solution
+problem y_search: fake_cost, a1f, a2f, a3f, a4f, a5f, x_sf, x_ef, yf, y_sf, y_ef, uf, first_taskf, last_taskf, check_if_endtaskf, check_if_starttaskf, start_constraintf, task_lengthf, task_distancef, identical_indexf, interval_constraint1f, interval_constraint2f, dependency_constraint1f, dependency_constraint2f, unique_start_endf;
+
+solve y_search;
+
+let number_of_iterations := 0;
+let elements_in_list := 0; #Used for our unique random destroyer
+let n := 1; #counter
+let randj := 0;
+
+
+#Weight parameters, see mathematical model
+let C1 := 20;
+let C2 := 20;
+let C3 := 20;
+let C4 := 20;
+let C5 := 20;
+
+#Start violations at 0
+let a1_violations := 0;
+let a2_violations := 0;
+let a3_violations := 0;
+let a4_violations := 0;
+let a5_violations := 0;
+
+
+# Count the number of y-, (y_s- and y_e)-variables
+let count := 0;
+for {k in G, i in I_g[k], j in I_g[k]}
+{
+	if i != j then
+	{
+		let count := count + 1;
+	}
+}
+
+
+#Parameters used for randomizing y-variables to unfix
+let timelines := 0;
+for{k in G}
+{
+	let p[k] := card(I_g[k]);
+	let timelines := card(G);
+}
+
+#display x_sf, x_ef;
+
+### Solve first iteration to get start solution ###
+solve y_search;
+
+for {k in G, i in I_g[k], j in I_g[k]}
+{
+	if a1[k,i,j] > 0 then
+	{
+		let a1_violations := a1_violations + 1;
+	}
+}
+
+for {i in I}
+{
+	if a2[i] > 0 then
+	{
+		let a2_violations := a2_violations + 1;
+	}
+	if a3[i] > 0 then
+	{
+		let a3_violations := a3_violations + 1;
+	}
+}
+
+for {d in D}
+{
+	if a4[d] > 0 then
+	{
+		let a4_violations := a4_violations + 1;
+	}
+	if a5[d] > 0 then
+	{
+		let a5_violations := a5_violations + 1;
+	}	
+}
+
+let a_violations := a1_violations + a2_violations + a3_violations + a4_violations + a5_violations;
+
+#Define the real problem
+problem LNS_search: total_cost, y, y_s, y_e, x_s, x_e, u, a1, a2, a3, a4, a5, first_task, last_task, check_if_endtask, check_if_starttask, start_constraint, task_distance, task_length, interval_constraint1, interval_constraint2, dependency_constraint1, dependency_constraint2, identical_index, unique_start_end;
+
+for {k in G, i in I_g[k], j in I_g[k]}
+{
+	fix y[k,i,j] := yf[k,i,j];
+
+}
+
+solve LNS_search;
+
+for {k in G, i in I_g[k], j in I_g[k]}
+{
+	if a1[k,i,j] > 0 then
+	{
+		let a1_violations := a1_violations + 1;
+	}
+}
+
+for {i in I}
+{
+	if a2[i] > 0 then
+	{
+		let a2_violations := a2_violations + 1;
+	}
+	if a3[i] > 0 then
+	{
+		let a3_violations := a3_violations + 1;
+	}
+}
+for {d in D}
+{
+	if a4[d] > 0 then
+	{
+		let a4_violations := a4_violations + 1;
+	}
+	if a5[d] > 0 then
+	{
+		let a5_violations := a5_violations + 1;
+	}	
+}
+
+#Calculate total violation
+let a_violations := a1_violations + a2_violations + a3_violations + a4_violations + a5_violations;
+
+let sum_a1 := sum{k in G}(sum{L in I_g[k]} (sum{j in I_g[k]} a1[k,L,j]));
+let sum_a2 := sum{L in I} a2[L];
+let sum_a3 := sum{L in I} a3[L];
+let sum_a4 := sum{d in D} a4[d];
+let sum_a5 := sum{d in D} a5[d];
+	
+#Display the sum of artificial variables to see which constraint is violated the most
+display sum_a1;
+display sum_a2;
+display sum_a3;
+display sum_a4;
+display sum_a5;
+
+let total_violation := sum_a1 + sum_a2 + sum_a3 + sum_a4 + sum_a5; 
+
+#Display and save some results, same lines will be used later
+let best_solution := total_violation;
+display best_solution;
+let current_solution := best_solution;
+let time_elapsed := _ampl_time + _total_solve_elapsed_time;
+let iteration_time := _ampl_time + _total_solve_elapsed_time - time_elapsed;
+let times_at_optima := 0;
+display current_solution, number_of_iterations,  time_elapsed , iteration_time > ***RESFILE***;
+###############
+
+repeat
+{	
+	### Add another iteration
+	let number_of_iterations := number_of_iterations + 1;
+
+	let n := 1;
+	let min_destroy := 0.5;
+	let max_destroy := 0.5;
+	
+	#Calculate the destroy_degree
+	let destroy_degree := round(Uniform(min_destroy,max_destroy),2); #rounds the uniform value to 1 digit past the decimal point. 
+	let destroy := round(destroy_degree*count);
+
+
+	#Start with the empty lists
+	let elements_in_list := 0;
+	if min_destroy > max_destroy then
+	{
+		printf "min_destroy should be lower than max_destroy! \n";
+		exit;
+	}
+
+	# Set the previous solution
+	if number_of_iterations = 1 then
+	{
+		let previous_solution := best_solution;
+	}
+	else
+	{
+		let previous_solution := current_solution;
+	}
+	
+
+	
+	
+	### Destroy function ###
+
+	fix y;
+	
+	let S := 1..count;	
+
+	#Initialize all the lists
+	for {Q in 1..count}
+	{
+		let K_list[Q] := 0;
+		let I_list[Q] := 1;
+		let J_list[Q] := 1;
+	}
+
+	### Used for number of indices in K_list, I_list, J_list
+
+    #Different S-lists for the three different kinds of violations
+
+	let S1 := setof {k in G, i in I_g[k], j in I_g[k]: i != j} a1[k,i,j];
+
+	let S21_temp := setof {i in I} a2[i];
+	let S22_temp := setof {i in I} a3[i];
+
+	let S31_temp := setof {d in D} a4[d];
+	let S32_temp := setof {d in D} a5[d];
+
+	let S2 := S21_temp union S22_temp;
+	let S3 := S31_temp union S32_temp; 	
+
+
+	###############
+	
+
+
+        #Destroy function, unfixing one at a time
+		let n := 0;
+		for {i in S1}
+		{	
+			if elements_in_list != destroy then
+			{
+		
+				for {k in G, L in I_g[k], j in I_g[k]: a1[k, L, j] = i && a1[k,L,j] > 0 && L != j} 
+				{
+					unfix y[k,L,j];
+					let elements_in_list := elements_in_list + 1;
+
+
+					let n := n + 1;				
+                    
+                    #Saving index of the unfixed y-variable
+					let K_list[n] := k;
+					let I_list[n] := L;
+					let J_list[n] := j;
+
+				}
+			
+			}
+
+		
+		}
+
+		for {i in S2}
+		{	
+
+			if elements_in_list != destroy then
+			{
+		
+				for {k in G, L in I_g[k], j in I_g[k]: a2[L] = i && L != j && y[k,L,j] = 1 && a2[L] > 0}
+				{ 
+					unfix y[k,L,j];
+					let elements_in_list := elements_in_list + 1;
+
+					let n := n + 1;				
+
+					let K_list[n] := k;
+					let I_list[n] := L;
+					let J_list[n] := j;
+
+
+					
+				}
+		
+				for {k in G, L in I_g[k], j in I_g[k]: a2[L] = i && L != j && y[k,j,L] = 1 && a2[L] > 0}
+				{ 
+					unfix y[k,j,L];
+					let elements_in_list := elements_in_list + 1;
+
+
+					let n := n + 1;				
+
+					let K_list[n] := k;
+					let I_list[n] := L;
+					let J_list[n] := j;
+
+				}
+
+			
+			}
+
+			if elements_in_list != destroy then
+			{
+		
+				for {k in G, L in I_g[k], j in I_g[k]: a3[L] = i && L != j && y[k,L,j] = 1 && a3[L] > 0}
+				{ 
+					unfix y[k,L,j];
+					let elements_in_list := elements_in_list + 1;
+
+					let n := n + 1;				
+
+					let K_list[n] := k;
+					let I_list[n] := L;
+					let J_list[n] := j;
+				}
+				
+				for {k in G, L in I_g[k], j in I_g[k]: a3[L] = i && L != j && y[k,j,L] = 1 && a3[L] > 0}
+				{ 
+					unfix y[k,j,L];
+					let elements_in_list := elements_in_list + 1;
+
+
+					let n := n + 1;				
+
+					let K_list[n] := k;
+					let I_list[n] := L;
+					let J_list[n] := j;
+				}				
+
+			
+			}
+		
+		}
+		#display n, y_s, y_e;
+
+		for {i in S3}
+		{	
+
+			if elements_in_list != destroy then
+			{
+		
+				for {d in D: a4[d] = i && a4[d] > 0}
+				{ 	
+					for {j in I_g[g[I_df[d]]]: y[g[I_df[d]],I_df[d],j] = 1 && I_df[d] != j}
+					{
+
+		
+						unfix y[g[I_df[d]],I_df[d],j];
+						#display I_df[d];
+						
+						let elements_in_list := elements_in_list + 1;
+	
+						let n := n + 1;				
+	
+						let K_list[n] := g[I_df[d]];
+						let I_list[n] := I_df[d];
+						let J_list[n] := j;
+
+					}
+					for {j in I_g[g[I_df[d]]]: y[g[I_df[d]],j,I_df[d]] = 1 && I_df[d] != j}
+					{
+
+		
+						unfix y[g[I_df[d]],j,I_df[d]];
+						
+						let elements_in_list := elements_in_list + 1;
+	
+						let n := n + 1;				
+	
+						let K_list[n] := g[I_df[d]];
+						let I_list[n] := I_df[d];
+						let J_list[n] := j;
+						
+						#display I_df[d];
+
+					}
+				}
+
+				for {d in D: a5[d] = i && a5[d] > 0}
+				{ 	
+					for {j in I_g[g[I_df[d]]]: y[g[I_df[d]],I_df[d],j] = 1 && I_df[d] != j}
+					{
+
+		
+						unfix y[g[I_df[d]],I_df[d],j];
+						
+						let elements_in_list := elements_in_list + 1;
+	
+						let n := n + 1;				
+	
+						let K_list[n] := g[I_df[d]];
+						let I_list[n] := I_df[d];
+						let J_list[n] := j;
+						#display I_df[d];				
+
+					}
+					for {j in I_g[g[I_df[d]]]: y[g[I_df[d]],j,I_df[d]] = 1 && I_df[d] != j}
+					{
+
+						#display I_df[d];
+						unfix y[g[I_df[d]],j,I_df[d]];
+						
+						let elements_in_list := elements_in_list + 1;
+	
+
+
+					}
+				}
+			}
+		}
+
+		let destroy_degree := round((destroy - elements_in_list)/count,2);
+		for {k in G, i in I_g[k], j in I_g[k]}
+		{	
+			if i != j then
+			{
+				if Uniform(1,100) <= destroy_degree*100 then
+				{	
+					
+					unfix y[k,i,j];
+
+
+				}
+			}
+		}
+
+
+	### Solve the problem aka Repair function ###
+	solve LNS_search;
+
+	let sum_a1 := sum{k in G}(sum{L in I_g[k]} (sum{j in I_g[k]} a1[k,L,j]));
+	let sum_a2 := sum{L in I} a2[L];
+	let sum_a3 := sum{L in I} a3[L];
+	let sum_a4 := sum{d in D} a4[d];
+	let sum_a5 := sum{d in D} a5[d];
+	
+
+	let total_violation := sum_a1 + sum_a2 + sum_a3 + sum_a4 + sum_a5; 
+
+
+	let current_solution := total_violation;
+	display current_solution, number_of_iterations,  time_elapsed , iteration_time > ***RESFILE***;
+
+    ### Incase solver gets stuck, setting different weights
+	if current_solution = previous_solution then
+	{   
+		if times_at_optima < 3 then
+		{
+			let destroy_degree := min_destroy + times_at_optima*(max_destroy-min_destroy)/2;
+			let times_at_optima := times_at_optima + 1;
+
+
+		}
+		else
+		{
+
+			if C1 = sum_a1/total_violation*100 && C2 = sum_a2/total_violation*100 && C3 = sum_a3/total_violation*100 && C4 = sum_a4/total_violation*100 && C5 = sum_a5/total_violation*100 then
+			{
+				let C1 := Uniform(1, 100)*(sum_a1+20)/total_violation;
+				let C2 := Uniform(1, 100)*(sum_a2+20)/total_violation;
+				let C3 := Uniform(1, 100)*(sum_a3+20)/total_violation;
+				let C4 := Uniform(1, 100)*(sum_a4+20)/total_violation;
+				let C5 := Uniform(1, 100)*(sum_a5+20)/total_violation;				
+				
+			}
+			else
+			{
+
+
+			let C1 := sum_a1/total_violation*100+20;
+			let C2 := sum_a2/total_violation*100+20;
+			let C3 := sum_a3/total_violation*100+20;
+			let C4 := sum_a4/total_violation*100+20;
+			let C5 := sum_a5/total_violation*100+20;
+			let times_at_optima := 0;
+			
+			}
+
+
+		}
+	}
+	else
+	{
+		#Calculate new destroy_degree for next iteration
+		let destroy_degree := round(Uniform(min_destroy,max_destroy),2); #rounds the uniform value to 1 digit past the decimal point.
+	}		
+
+	
+	# Check if the current solution is the best solution found
+	if current_solution < best_solution then
+	{
+		let best_solution := current_solution;
+	}
+	
+
+	#Recalculate the weight parameters when suited, else if all are 0 then we have found the solution and will stop iterating. Also an accept function.
+	if total_violation = 0 then
+	{
+		printf "Time elapsed is: ";
+		printf "In else before exit! \n\n\n\n\n";
+		printf "Number of iterations: ";
+		print number_of_iterations;
+		printf "\n";
+		exit;
+	}
+
+	let iteration_time := _ampl_time + _total_solve_elapsed_time - time_elapsed;
+	let time_elapsed := _ampl_time + _total_solve_elapsed_time;
+	display total_cost;
+	display total_violation, C1, C2, C3, C4, C5;
+	}
+	until total_violation = 0 || time_elapsed >= 2000; #Timelimit set at 2000
+
+exit;
+

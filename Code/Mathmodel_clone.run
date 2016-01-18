@@ -1,0 +1,148 @@
+#-----------------------------------
+
+# Kommandofil: LNSModel.run
+
+#-----------------------------------
+
+reset;                  # Nollställer
+
+option solver cplexamp;    # Val av lösare.
+
+#option presolve 0;      
+
+option omit_zero_cols 1;   # Skriver ej ut nollor i kolumner
+
+option omit_zero_rows 1;   # Skriver ej ut nollor i rader
+
+option display_1col 10000; # Skriver ut bara en kolumn (mer lättläst)
+
+option cplex_options "timing 1 mipdisplay 2"; #Tidtagning och utskrifter
+
+
+
+model src/main/ampl/MathModel.mod;   # Läser in namnet på modellfilen. 
+
+data src/test/testdata/A0_5_2015-11-16T15-02-24/AMPL.dat;    # Läser in namnet på datafilen. 
+
+
+
+
+
+#problem y_search: total_cost, u, x_s, x_e, y, y_s, y_e, first_task, last_task, check_if_endtask, check_if_starttask, start_constraint_noa, task_distance;
+
+
+
+#model LNSModel.mod;
+
+let time_elapsed := _ampl_time + _total_solve_elapsed_time;
+
+let iteration_time := _ampl_time + _total_solve_elapsed_time - time_elapsed;
+
+let number_of_iterations := 0;
+
+
+
+#let C1 := 20;
+
+#let C2 := 20;
+
+#let C3 := 20;
+
+#let C4 := 20;
+
+#let C5 := 20;
+
+
+
+
+
+
+
+
+
+
+
+
+
+#let best_solution := total_cost;
+
+#let total_violation := 1;
+
+
+
+# Count the number of y-, (y_s- and y_e)-variables
+
+#let count := 0;
+
+#for {k in G, i in I, j in I}
+
+
+
+for {i in I}
+
+{
+
+	fix x_s[i] := (t_e[i] + t_s[i])/2 - l[i]/2;
+
+	fix x_e[i] := x_s[i] + l[i];
+
+	#fix x_s[i];
+
+	
+
+
+
+}
+
+
+
+for {i in D}
+
+{
+
+	fix x_s[I_df[i]] := t_s[I_df[i]];
+
+	fix x_e[I_df[i]] := t_s[I_df[i]] + l[I_df[i]];
+
+
+
+	fix x_s[I_dt[i]] := t_e[I_dt[i]] - l[I_dt[i]];
+
+	fix x_e[I_dt[i]] := t_e[I_dt[i]];
+
+
+
+
+
+}
+
+
+
+#display x_s, x_e;
+
+solve;
+
+display y, y_s, y_e, u;
+
+display total_cost;
+
+#display _varname, _var;
+
+#display total_cost > Mathmodel.res;
+
+let number_of_iterations := number_of_iterations + 1;
+
+let iteration_time := _ampl_time + _total_solve_elapsed_time - time_elapsed;
+
+let time_elapsed := _ampl_time + _total_solve_elapsed_time;
+
+display total_cost, number_of_iterations, time_elapsed, iteration_time > src/main/ampl/MathModel.res;
+
+#display _varname, _var > Mathmodel.res;
+
+#expand > Mathmodel.exp;
+
+
+
+exit;
+
